@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Giriş Yap — evraksihirbazi.com</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EEF2F8}
+a{color:#2563EB}a:hover{color:#1D4ED8}
+.i{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.i2{stroke-width:2.5}
+button,input{font-family:inherit}
+.tr{transition:background-color .15s ease,border-color .15s ease,box-shadow .18s ease,transform .12s ease,color .15s ease,opacity .15s ease}
+.fx:focus-visible{outline:none;border-color:#2563EB !important;box-shadow:0 0 0 4px rgba(59,130,246,.22) !important}
+/* floating label field */
+.fl{position:relative}
+.fl input{width:100%;height:56px;box-sizing:border-box;padding:22px 14px 6px 44px;border-radius:12px;border:1px solid #CBD5E1;background:#FFFFFF;color:#0F1E36;font-size:15px;line-height:20px;font-weight:500;outline:none;transition:border-color .15s ease,box-shadow .18s ease,background-color .15s ease}
+.fl input:hover{border-color:#94A3B8}
+.fl input:focus{border-color:#2563EB;box-shadow:0 0 0 4px rgba(59,130,246,.22)}
+.fl label{position:absolute;left:44px;top:18px;font-size:15px;line-height:20px;color:#6B7280;font-weight:500;pointer-events:none;transition:top .16s cubic-bezier(.2,.9,.3,1),font-size .16s ease,color .15s ease}
+.fl input:focus + label,.fl input:not(:placeholder-shown) + label{top:8px;font-size:12px;line-height:14px;font-weight:600;color:#4B5563}
+.fl input:focus + label{color:#2563EB}
+.fl .ico{position:absolute;left:14px;top:18px;color:#6B7280;pointer-events:none}
+.fl input:focus ~ .ico{color:#2563EB}
+.fl.bad input{border-color:#DC2626;background:#FEF2F2;box-shadow:0 0 0 4px rgba(220,38,38,.14)}
+.fl.bad label,.fl.bad .ico{color:#DC2626 !important}
+.fl.pw input{padding-right:52px}
+/* buttons */
+.b-pri:hover:not([disabled]){background:#1D4ED8 !important;box-shadow:0 12px 26px -8px rgba(59,130,246,.65) !important}
+.b-pri:active:not([disabled]){transform:translateY(1px) scale(.99)}
+.b-soc:hover{border-color:#94A3B8 !important;background:#F9FAFB !important}
+.b-soc:active{transform:translateY(1px)}
+.b-ghost:hover{background:#F1F5F9 !important;color:#0F1E36 !important}
+.b-tab:hover{color:#0F1E36 !important}
+.lnk{text-decoration:none;font-weight:700}.lnk:hover{text-decoration:underline}
+/* otp */
+.otp{width:52px;height:60px;box-sizing:border-box;border-radius:12px;border:1px solid #CBD5E1;background:#FFFFFF;text-align:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:26px;font-weight:600;color:#0F1E36;outline:none;caret-color:#2563EB;transition:border-color .15s ease,box-shadow .18s ease,background-color .15s ease,transform .15s ease}
+.otp:hover{border-color:#94A3B8}
+.otp:focus{border-color:#2563EB !important;box-shadow:0 0 0 4px rgba(59,130,246,.22);transform:translateY(-1px)}
+@keyframes es-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(3px)}}
+.shake{animation:es-shake .45s cubic-bezier(.36,.07,.19,.97)}
+@keyframes es-slide{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes es-slideb{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:none}}
+.slide{animation:es-slide .38s cubic-bezier(.2,.9,.3,1) both}
+.slideb{animation:es-slideb .38s cubic-bezier(.2,.9,.3,1) both}
+@keyframes es-morph{0%{transform:scale(.6);border-radius:14px;opacity:.4}60%{transform:scale(1.08);border-radius:999px;opacity:1}100%{transform:scale(1);border-radius:999px}}
+.morph{animation:es-morph .45s cubic-bezier(.2,.9,.3,1) both}
+@keyframes es-draw{from{stroke-dashoffset:30}to{stroke-dashoffset:0}}
+.draw{stroke-dasharray:30;stroke-dashoffset:30;animation:es-draw .35s .25s ease-out forwards}
+@keyframes es-ring{from{transform:scale(1);opacity:.5}to{transform:scale(1.9);opacity:0}}
+.ring{animation:es-ring 1s .2s ease-out both}
+@keyframes es-bar{from{width:0}to{width:100%}}
+.bar{animation:es-bar 2.6s .3s linear both}
+@keyframes es-spin{to{transform:rotate(360deg)}}
+.spin{animation:es-spin .8s linear infinite}
+@keyframes es-up{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.up{animation:es-up .5s cubic-bezier(.2,.9,.3,1) both}
+@keyframes es-tick{0%{transform:scale(0)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+.tk{animation:es-tick .3s cubic-bezier(.2,.9,.3,1) both}
+@keyframes es-grow{from{width:20%}to{width:80%}}
+.grow{animation:es-grow 2.2s .4s cubic-bezier(.4,0,.2,1) both}
+@keyframes es-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float{animation:es-float 6s ease-in-out infinite}
+@media (max-width:960px){.auth-left{display:none !important}.auth-wrap{background:#EEF2F8 !important;background-image:radial-gradient(#C3CEDF 1px,transparent 1.2px) !important;background-size:22px 22px !important;padding:24px 16px !important}.auth-right{border-radius:24px !important;background:rgba(255,255,255,.86) !important;backdrop-filter:blur(16px);box-shadow:0 24px 48px -16px rgba(15,30,54,.28) !important;border:1px solid #FFFFFF !important;padding:28px 20px !important;flex:1 1 auto !important;max-width:460px;margin:0 auto}.otp{width:44px;height:54px;font-size:22px}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}.draw{stroke-dashoffset:0}}
+</style>
+</helmet>
+<div class="auth-wrap" style="min-height: 900px; display: flex; background: #FFFFFF; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0F1E36; font-size: 15px; line-height: 24px;">
+
+<!-- ============ LEFT · TRUST PANEL (60%) ============ -->
+<aside class="auth-left" aria-label="evraksihirbazi.com hakkında" style="flex: 3 1 0; min-width: 0; position: relative; overflow: hidden; background-color: #F9FAFB; background-image: radial-gradient(#D3DCE9 1px, transparent 1.2px); background-size: 24px 24px; border-right: 1px solid #E8EDF5; padding: 48px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px;">
+<span aria-hidden="true" style="position: absolute; width: 720px; height: 720px; border-radius: 999px; border: 1px solid #DCE3EE; right: -260px; top: 120px;"></span>
+<span aria-hidden="true" style="position: absolute; width: 460px; height: 460px; border-radius: 999px; border: 1px solid #DCE3EE; right: -130px; top: 250px;"></span>
+
+<img src="/_blob/54a5b75989dd8cd457b46406a1a56bb8" alt="evraksihirbazi.com" style="position: relative; height: 26px; width: auto; align-self: flex-start;">
+
+<div style="position: relative; display: flex; flex-direction: column; gap: 12px; max-width: 560px;">
+<h2 style="margin: 0; font-family: Lexend, sans-serif; font-size: 40px; line-height: 48px; font-weight: 600; letter-spacing: -0.025em; color: #1A365D;">Evraklarınız, sihirli bir dokunuşla hazır.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 27px; color: #4B5563;">Okulunuzu ve görevinizi bir kez tanıtın; Yıllık Plan'dan ŞÖK tutanağına kadar her evrak sizin bilgilerinizle oluşsun.</p>
+</div>
+
+<!-- Live wizard preview (blurred background + sharp foreground) -->
+<div aria-hidden="true" style="position: relative; height: 330px; max-width: 640px;">
+<div style="position: absolute; left: 0; top: 18px; width: 300px; height: 300px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E8EDF5; box-shadow: 0 10px 24px -6px rgba(15,30,54,0.18); padding: 26px; box-sizing: border-box; filter: blur(2.5px); opacity: 0.8; display: flex; flex-direction: column; gap: 10px;">
+<span style="height: 10px; width: 70%; margin: 0 auto 10px; border-radius: 4px; background: #CBD5E1;"></span>
+<span style="height: 40px; border-radius: 4px; border: 1px solid #CBD5E1;"></span>
+<span style="height: 8px; width: 92%; border-radius: 4px; background: #E2E8F0;"></span>
+<span style="height: 8px; width: 80%; border-radius: 4px; background: #E2E8F0;"></span>
+<span style="height: 8px; width: 88%; border-radius: 4px; background: #E2E8F0;"></span>
+<span style="height: 8px; width: 60%; border-radius: 4px; background: #E2E8F0;"></span>
+<span style="height: 8px; width: 84%; border-radius: 4px; background: #E2E8F0;"></span>
+<span style="height: 8px; width: 72%; border-radius: 4px; background: #E2E8F0;"></span>
+</div>
+<div class="float" style="position: absolute; left: 190px; top: 0; width: 380px; border-radius: 18px; background: rgba(255,255,255,0.82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid #FFFFFF; box-shadow: 0 1px 0 #E8EDF5, 0 24px 48px -16px rgba(15,30,54,0.28); padding: 18px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<div style="display: flex; align-items: center; gap: 10px;">
+<span style="width: 34px; height: 34px; border-radius: 9px; background: #1A365D; color: #00B4D8; display: flex; align-items: center; justify-content: center;"><svg class="i" width="18" height="18" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span>
+<div style="flex: 1 1 0;"><div style="font-size: 14px; line-height: 20px; font-weight: 700;">Sihirli kontrol listesi</div><div style="font-size: 12px; line-height: 16px; color: #6B7280; font-weight: 500;">Ortaokul · Dönem başı</div></div>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px; border-radius: 999px; background: #E0F7FC; color: #1A365D; font-size: 11px; line-height: 16px; font-weight: 700;"><span style="width: 6px; height: 6px; border-radius: 999px; background: #00B4D8;"></span>Sihirbaz aktif</span>
+</div>
+<div style="height: 8px; border-radius: 999px; background: #E8EDF5; overflow: hidden;"><div class="grow" style="height: 100%; border-radius: 999px; background: #3B82F6;"></div></div>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px; line-height: 18px; font-weight: 600;"><span class="tk" style="animation-delay: .6s; width: 20px; height: 20px; border-radius: 6px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="12" height="12" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span style="flex: 1 1 0;">Yıllık Plan</span><span style="color: #15803D; font-size: 12px; font-weight: 700;">Hazır</span></div>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px; line-height: 18px; font-weight: 600;"><span class="tk" style="animation-delay: 1.2s; width: 20px; height: 20px; border-radius: 6px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="12" height="12" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span style="flex: 1 1 0;">Zümre Tutanağı</span><span style="color: #15803D; font-size: 12px; font-weight: 700;">Hazır</span></div>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px; line-height: 18px; font-weight: 600;"><span class="tk" style="animation-delay: 1.8s; width: 20px; height: 20px; border-radius: 6px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="12" height="12" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span style="flex: 1 1 0;">Belirli Gün ve Haftalar</span><span style="color: #15803D; font-size: 12px; font-weight: 700;">Hazır</span></div>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 13px; line-height: 18px; font-weight: 600;"><span style="width: 20px; height: 20px; border-radius: 6px; background: #FFFBEB; border: 1px solid #FCD34D; box-sizing: border-box;"></span><span style="flex: 1 1 0;">ŞÖK Tutanağı</span><span style="padding: 1px 7px; border-radius: 999px; background: #FFFBEB; color: #B45309; font-size: 11px; font-weight: 700;">Mühür eksik</span></div>
+</div>
+<div style="position: absolute; left: 120px; bottom: 8px; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E8EDF5; box-shadow: 0 10px 24px -6px rgba(15,30,54,0.22);"><span style="width: 26px; height: 26px; border-radius: 999px; background: #F0FDF4; color: #15803D; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="14" height="14" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size: 13px; line-height: 18px; font-weight: 700;">Evrak hazırlandı · A4 · 2,8 sn</span></div>
+</div>
+
+<!-- Testimonial (placeholders: real, consented quotes only) -->
+<figure style="position: relative; margin: 0; max-width: 560px; padding: 20px 22px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5; display: flex; flex-direction: column; gap: 14px;">
+<blockquote style="margin: 0; font-size: 16px; line-height: 26px; color: #0F1E36; font-weight: 500;">“[Gerçek bir öğretmen yorumu — kullanıcının yazılı izniyle, kısaltmadan.]”</blockquote>
+<figcaption style="display: flex; align-items: center; gap: 12px;">
+<span style="width: 38px; height: 38px; border-radius: 999px; background: #E0F7FC; color: #1A365D; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px;">[AS]</span>
+<span style="flex: 1 1 0; display: flex; flex-direction: column;"><span style="font-size: 14px; line-height: 20px; font-weight: 700;">[Ad Soyad]</span><span style="font-size: 13px; line-height: 18px; color: #4B5563;">[Branş] Öğretmeni · [İl]</span></span>
+<span style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; background: #F0FDF4; color: #15803D; font-size: 12px; line-height: 16px; font-weight: 700;"><svg class="i" width="13" height="13" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Doğrulanmış kullanıcı</span>
+</figcaption>
+</figure>
+
+<div style="flex: 1 1 0;"></div>
+<ul style="position: relative; list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;">
+<li style="display: flex; align-items: center; gap: 7px;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" style="color: #15803D;"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>TLS ile şifreli bağlantı</li>
+<li style="display: flex; align-items: center; gap: 7px;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" style="color: #15803D;"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>KVKK aydınlatma metni</li>
+<li style="display: flex; align-items: center; gap: 7px;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" style="color: #15803D;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="8" y2="13"/><line x1="22" x2="17" y1="8" y2="13"/></svg>Öğrenci verisi yapay zekâya gönderilmez</li>
+</ul>
+</aside>
+
+<!-- ============ RIGHT · AUTH CONTAINER (40%) ============ -->
+<main class="auth-right" style="flex: 2 1 0; min-width: 420px; background: #FFFFFF; padding: 48px 56px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
+<div style="width: 100%; max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px;">
+
+<!-- ===== STEP: FORM ===== -->
+<sc-if value="{{ isForm }}" hint-placeholder-val="{{ true }}">
+<div class="{{ formAnim }}" style="display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<img src="/_blob/964d31745d4aa1a53c7f589fc9ca2f5c" alt="" style="width: 52px; height: 52px; object-fit: contain; margin-bottom: 10px;">
+<h1 style="margin: 0; font-family: Lexend, sans-serif; font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em; color: #1A365D;">{{ title }}</h1>
+<p style="margin: 0; font-size: 15px; line-height: 23px; color: #4B5563;">{{ subtitle }}</p>
+</div>
+
+<div role="tablist" aria-label="Hesap" style="position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 4px; border-radius: 12px; background: #F1F5F9; border: 1px solid #E8EDF5;">
+<span aria-hidden="true" style="position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 4px); border-radius: 9px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(15,30,54,.08), 0 2px 6px -2px rgba(15,30,54,.14); transform: translateX({{ pillX }}%); transition: transform .25s cubic-bezier(.2,.9,.3,1);"></span>
+<button type="button" role="tab" class="tr b-tab fx" aria-selected="{{ isLogin }}" onClick="{{ toLogin }}" style="position: relative; min-height: 40px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: {{ tabLoginFg }}; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;">Giriş Yap</button>
+<button type="button" role="tab" class="tr b-tab fx" aria-selected="{{ isSignup }}" onClick="{{ toSignup }}" style="position: relative; min-height: 40px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: {{ tabSignupFg }}; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;">Hesap Oluştur</button>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px;">
+<button type="button" class="tr b-soc fx" style="min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #0F1E36; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;"><span aria-hidden="true" title="Resmî Google logosu" style="width: 20px; height: 20px; border-radius: 5px; border: 1.5px dashed #9CA3AF; box-sizing: border-box;"></span>Google</button>
+<button type="button" class="tr b-soc fx" style="min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 12px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #0F1E36; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;"><span aria-hidden="true" title="Resmî Apple logosu" style="width: 20px; height: 20px; border-radius: 5px; border: 1.5px dashed #9CA3AF; box-sizing: border-box;"></span>Apple</button>
+</div>
+
+<div style="display: flex; align-items: center; gap: 12px; font-size: 12px; line-height: 16px; font-weight: 600; color: #6B7280;"><span style="flex: 1 1 0; height: 1px; background: #E5E7EB;"></span>VEYA E-POSTA İLE<span style="flex: 1 1 0; height: 1px; background: #E5E7EB;"></span></div>
+
+<form onSubmit="{{ submit }}" novalidate style="display: flex; flex-direction: column; gap: 14px; margin: 0;">
+<sc-if value="{{ isSignup }}" hint-placeholder-val="{{ false }}">
+<div class="up" style="display: flex; flex-direction: column; gap: 6px;">
+<div class="fl {{ nameCls }}">
+<input id="f-name" type="text" autocomplete="name" placeholder=" " value="{{ name }}" onChange="{{ onName }}" aria-invalid="{{ nameBad }}" aria-describedby="f-name-e">
+<label for="f-name">Ad Soyad</label>
+<svg class="i ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+</div>
+<sc-if value="{{ nameBad }}" hint-placeholder-val="{{ false }}"><span id="f-name-e" role="alert" style="font-size: 12px; line-height: 16px; font-weight: 600; color: #DC2626;">{{ err.name }}</span></sc-if>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div class="fl {{ emailCls }}">
+<input id="f-email" type="email" autocomplete="email" inputmode="email" placeholder=" " value="{{ email }}" onChange="{{ onEmail }}" aria-invalid="{{ emailBad }}" aria-describedby="f-email-e">
+<label for="f-email">E-posta adresi</label>
+<svg class="i ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+</div>
+<sc-if value="{{ emailBad }}" hint-placeholder-val="{{ false }}"><span id="f-email-e" role="alert" style="display: flex; align-items: center; gap: 6px; font-size: 12px; line-height: 16px; font-weight: 600; color: #DC2626;"><svg class="i" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>{{ err.email }}</span></sc-if>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<div class="fl pw {{ pwCls }}">
+<input id="f-pw" type="{{ pwType }}" autocomplete="{{ pwAuto }}" placeholder=" " value="{{ password }}" onChange="{{ onPw }}" aria-invalid="{{ pwBad }}" aria-describedby="f-pw-e">
+<label for="f-pw">Şifre</label>
+<svg class="i ico" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+<button type="button" class="tr b-ghost fx" onClick="{{ togglePw }}" aria-label="{{ pwToggleLabel }}" aria-pressed="{{ showPw }}" style="position: absolute; right: 6px; top: 6px; width: 44px; height: 44px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: #6B7280; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;">
+<sc-if value="{{ showPw }}" hint-placeholder-val="{{ false }}"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/><path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/><path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/><path d="m2 2 20 20"/></svg></sc-if>
+<sc-if value="{{ hidePw }}" hint-placeholder-val="{{ true }}"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></sc-if>
+</button>
+</div>
+<sc-if value="{{ pwBad }}" hint-placeholder-val="{{ false }}"><span id="f-pw-e" role="alert" style="display: flex; align-items: center; gap: 6px; font-size: 12px; line-height: 16px; font-weight: 600; color: #DC2626;"><svg class="i" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>{{ err.password }}</span></sc-if>
+<sc-if value="{{ pwHint }}" hint-placeholder-val="{{ false }}"><span style="font-size: 12px; line-height: 16px; font-weight: 500; color: #6B7280;">En az 8 karakter; bir rakam eklemeniz önerilir.</span></sc-if>
+</div>
+
+<sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+<label style="display: inline-flex; align-items: center; gap: 8px; min-height: 32px; font-size: 14px; line-height: 20px; color: #0F1E36; font-weight: 500; cursor: pointer;"><input type="checkbox" checked="{{ remember }}" onChange="{{ onRemember }}" style="width: 18px; height: 18px; margin: 0; accent-color: #2563EB;">Bu cihazda hatırla (30 gün)</label>
+<a href="#" class="lnk" style="font-size: 14px; line-height: 20px; color: #2563EB;">Şifremi unuttum</a>
+</div>
+</sc-if>
+<sc-if value="{{ isSignup }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<label style="display: flex; align-items: flex-start; gap: 10px; font-size: 13px; line-height: 20px; color: #4B5563; cursor: pointer;"><input type="checkbox" checked="{{ kvkk }}" onChange="{{ onKvkk }}" aria-invalid="{{ kvkkBad }}" style="width: 18px; height: 18px; margin: 1px 0 0; flex-shrink: 0; accent-color: #2563EB;"><span><a href="#" class="lnk" style="color: #2563EB;">KVKK Aydınlatma Metni</a>'ni ve <a href="#" class="lnk" style="color: #2563EB;">Kullanım Şartları</a>'nı okudum, kabul ediyorum.</span></label>
+<sc-if value="{{ kvkkBad }}" hint-placeholder-val="{{ false }}"><span role="alert" style="font-size: 12px; line-height: 16px; font-weight: 600; color: #DC2626; padding-left: 28px;">{{ err.kvkk }}</span></sc-if>
+</div>
+</sc-if>
+
+<button type="submit" class="tr b-pri fx" aria-busy="{{ loading }}" disabled="{{ loading }}" style="margin-top: 4px; min-height: 52px; border-radius: 12px; border: 1px solid transparent; background: #2563EB; color: #FFFFFF; font-size: 15px; line-height: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; box-shadow: 0 8px 20px -6px rgba(59,130,246,0.55);">
+<sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}"><svg class="i spin" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>{{ loadingLabel }}</sc-if>
+<sc-if value="{{ notLoading }}" hint-placeholder-val="{{ true }}">{{ cta }}<svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></sc-if>
+</button>
+</form>
+
+<p style="margin: 0; font-size: 12px; line-height: 18px; color: #6B7280; text-align: center;">Giriş yaparak <a href="#" class="lnk" style="color: #4B5563;">Kullanım Şartları</a> ve <a href="#" class="lnk" style="color: #4B5563;">Gizlilik Politikası</a>'nı kabul etmiş olursunuz.</p>
+</div>
+</sc-if>
+
+<!-- ===== STEP: OTP ===== -->
+<sc-if value="{{ isOtp }}" hint-placeholder-val="{{ false }}">
+<div class="slide" style="display: flex; flex-direction: column; gap: 24px;">
+<button type="button" class="tr b-ghost fx" onClick="{{ back }}" style="align-self: flex-start; min-height: 40px; margin-left: -10px; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: #4B5563; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Geri</button>
+
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span style="width: 52px; height: 52px; border-radius: 14px; background: #E0F7FC; color: #1A365D; display: flex; align-items: center; justify-content: center; margin-bottom: 6px;"><svg class="i" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="m16 19 2 2 4-4"/></svg></span>
+<h1 style="margin: 0; font-family: Lexend, sans-serif; font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em; color: #1A365D;">E-posta Adresinizi Doğrulayın</h1>
+<p style="margin: 0; font-size: 15px; line-height: 23px; color: #4B5563;"><b style="color: #0F1E36; font-weight: 700;">{{ email }}</b> adresine 6 haneli bir sihirli doğrulama kodu gönderdik.</p>
+</div>
+
+<sc-if value="{{ notOtpSuccess }}" hint-placeholder-val="{{ true }}">
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+<legend style="font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563; margin-bottom: 10px;">Doğrulama kodu</legend>
+<div class="{{ shakeCls }}" style="display: flex; align-items: center; gap: 8px;">
+<sc-for list="{{ boxes }}" as="b" hint-placeholder-count="6">
+<sc-if value="{{ b.gap }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width: 10px; height: 2px; border-radius: 2px; background: #CBD5E1; margin: 0 2px;"></span></sc-if>
+<input class="otp" ref="{{ b.ref }}" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="{{ b.auto }}" aria-label="{{ b.label }}" value="{{ b.v }}" onChange="{{ b.onChange }}" onKeyDown="{{ b.onKey }}" onPaste="{{ b.onPaste }}" onFocus="{{ b.onFocus }}" disabled="{{ verifying }}" style="border-color: {{ b.bd }}; background: {{ b.bg }};">
+</sc-for>
+<sc-if value="{{ verifying }}" hint-placeholder-val="{{ false }}"><svg class="i spin" width="20" height="20" viewBox="0 0 24 24" aria-label="Doğrulanıyor" style="color: #2563EB; margin-left: 6px;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg></sc-if>
+</div>
+<sc-if value="{{ otpErr }}" hint-placeholder-val="{{ false }}"><span role="alert" style="display: flex; align-items: center; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 600; color: #DC2626;"><svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>Kod hatalı veya süresi dolmuş. Tekrar deneyin.</span></sc-if>
+</fieldset>
+</sc-if>
+
+<sc-if value="{{ otpSuccess }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="display: flex; align-items: center; gap: 16px; min-height: 76px;">
+<span style="position: relative; width: 60px; height: 60px; flex-shrink: 0;">
+<span class="ring" style="position: absolute; inset: 0; border-radius: 999px; border: 2px solid #22C55E;"></span>
+<span class="morph" style="position: absolute; inset: 0; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M20 6 9 17l-5-5"/></svg></span>
+</span>
+<span style="display: flex; flex-direction: column;"><span style="font-size: 16px; line-height: 22px; font-weight: 700; color: #15803D;">Kod doğrulandı</span><span style="font-size: 13px; line-height: 18px; color: #4B5563;">Hesabınız açılıyor…</span></span>
+</div>
+</sc-if>
+
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 14px; background: #F9FAFB; border: 1px solid #E8EDF5;">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; line-height: 18px; color: #4B5563; font-weight: 600;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/></svg><span role="timer" aria-live="off" style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: {{ timerFg }};">{{ timer }}</span></span>
+<button type="button" class="tr fx lnk" onClick="{{ resend }}" disabled="{{ cantResend }}" aria-disabled="{{ cantResend }}" style="min-height: 36px; padding: 0 10px; border-radius: 8px; border: 1px solid transparent; background: transparent; color: {{ resendFg }}; font-size: 14px; line-height: 20px; font-weight: 700; cursor: {{ resendCursor }};">Kodu Tekrar Gönder</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: -8px;">
+<a href="https://mail.google.com" target="_blank" rel="noopener noreferrer" class="tr b-soc fx" style="min-height: 44px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 12px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #0F1E36; font-size: 14px; font-weight: 700; text-decoration: none;">Gmail'i aç<svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #6B7280;"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3"/></svg></a>
+<a href="https://outlook.live.com/mail" target="_blank" rel="noopener noreferrer" class="tr b-soc fx" style="min-height: 44px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 12px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #0F1E36; font-size: 14px; font-weight: 700; text-decoration: none;">Outlook'u aç<svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #6B7280;"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3"/></svg></a>
+</div>
+<sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}"><p class="up" role="status" style="margin: -12px 0 0; font-size: 13px; line-height: 18px; color: #15803D; font-weight: 600;">Yeni kod e-postanıza gönderildi.</p></sc-if>
+<p style="margin: 0; font-size: 13px; line-height: 20px; color: #6B7280;">E-posta gelmediyse spam veya “Diğer” klasörünü kontrol edin. Adres yanlışsa <button type="button" class="lnk fx" onClick="{{ back }}" style="border: 0; background: none; padding: 0; color: #2563EB; font-size: 13px; cursor: pointer;">e-postayı değiştirin</button>.</p>
+</div>
+</sc-if>
+
+<!-- ===== STEP: SUCCESS ===== -->
+<sc-if value="{{ isSuccess }}" hint-placeholder-val="{{ false }}">
+<div class="slide" role="status" style="display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center;">
+<span style="position: relative; width: 88px; height: 88px;">
+<span class="ring" style="position: absolute; inset: 0; border-radius: 999px; border: 2px solid #22C55E;"></span>
+<span class="morph" style="position: absolute; inset: 0; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true"><path class="draw" d="M20 6 9 17l-5-5"/></svg></span>
+</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #F0FDF4; color: #15803D; font-size: 12px; line-height: 16px; font-weight: 700;">{{ successBadge }}</span>
+<h1 style="margin: 0; font-family: Lexend, sans-serif; font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em; color: #1A365D;">{{ successTitle }}</h1>
+<p style="margin: 0; font-size: 15px; line-height: 23px; color: #4B5563;">Panelinize yönlendiriliyorsunuz.</p>
+<div style="width: 100%; height: 6px; border-radius: 999px; background: #E8EDF5; overflow: hidden;"><div class="bar" style="height: 100%; background: #15803D; border-radius: 999px;"></div></div>
+<a href="#" class="tr b-pri fx" style="min-height: 48px; padding: 0 20px; display: inline-flex; align-items: center; gap: 8px; border-radius: 12px; background: #2563EB; color: #FFFFFF; font-size: 15px; font-weight: 700; text-decoration: none; border: 1px solid transparent;">Hemen git<svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<button type="button" class="lnk fx" onClick="{{ restart }}" style="border: 0; background: none; color: #4B5563; font-size: 13px; cursor: pointer; min-height: 32px;">Akışı baştan oynat</button>
+</div>
+</sc-if>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"baslangic":{"editor":"enum","options":["form","otp"],"default":"form","section":"Akış"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    var otp = (props.baslangic || 'form') === 'otp';
+    this.state = { mode: 'login', step: otp ? 'otp' : 'form', back: false, email: otp ? 'ayse.ogretmen@okul.k12.tr' : '', password: '', name: '', showPw: false, remember: true, kvkk: false, err: {}, loading: false, otp: ['', '', '', '', '', ''], otpState: 'idle', secs: 45, sent: false, returning: false };
+    this.boxEls = [];
+  }
+  componentDidMount() { if (this.state.step === 'otp') this.startTimer(); }
+  componentWillUnmount() { clearInterval(this.iv); clearTimeout(this.t1); clearTimeout(this.t2); clearTimeout(this.t3); clearTimeout(this.t4); }
+  startTimer() {
+    var self = this;
+    clearInterval(this.iv);
+    this.setState({ secs: 45 });
+    this.iv = setInterval(function () {
+      var s = self.state.secs;
+      if (s <= 1) { clearInterval(self.iv); self.setState({ secs: 0 }); } else { self.setState({ secs: s - 1 }); }
+    }, 1000);
+  }
+  focusBox(i) { var self = this; setTimeout(function () { var b = self.boxEls[i]; if (b) { b.focus(); if (b.select) b.select(); } }, 40); }
+  submit(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    var s = this.state, err = {};
+    if (s.mode === 'signup' && !s.name.trim()) err.name = 'Ad soyad, evraklardaki imza alanında kullanılır.';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.email.trim())) err.email = 'Geçerli bir e-posta adresi girin (ör. ad@okul.k12.tr).';
+    if (s.password.length < 8) err.password = s.mode === 'signup' ? 'Şifre en az 8 karakter olmalı.' : 'Şifreniz en az 8 karakterden oluşur.';
+    if (s.mode === 'signup' && !s.kvkk) err.kvkk = 'Devam etmek için aydınlatma metnini onaylayın.';
+    if (Object.keys(err).length) { this.setState({ err: err }); return; }
+    var self = this;
+    this.setState({ err: {}, loading: true });
+    this.t1 = setTimeout(function () {
+      if (s.mode === 'login' && s.remember) { self.setState({ loading: false, step: 'success', returning: true }); return; }
+      self.setState({ loading: false, step: 'otp', otp: ['', '', '', '', '', ''], otpState: 'idle', sent: false, returning: false });
+      self.startTimer();
+      self.focusBox(0);
+    }, 1100);
+  }
+  writeDigits(start, digits) {
+    var otp = this.state.otpState === 'error' ? ['', '', '', '', '', ''] : this.state.otp.slice();
+    if (this.state.otpState === 'error') start = 0;
+    for (var k = 0; k < digits.length && start + k < 6; k++) otp[start + k] = digits[k];
+    this.setState({ otp: otp, otpState: 'idle' });
+    if (otp.every(function (x) { return x; })) { this.verify(otp); return; }
+    var next = -1;
+    for (var j = start + digits.length; j < 6; j++) { if (!otp[j]) { next = j; break; } }
+    if (next === -1) next = otp.indexOf('');
+    this.focusBox(next);
+  }
+  verify(otp) {
+    var self = this;
+    this.setState({ otpState: 'verifying' });
+    this.t2 = setTimeout(function () {
+      if (otp.join('') === '123456') {
+        clearInterval(self.iv);
+        self.setState({ otpState: 'success' });
+        self.t3 = setTimeout(function () { self.setState({ step: 'success' }); }, 1200);
+      } else {
+        self.setState({ otpState: 'error' });
+        self.t3 = setTimeout(function () { self.setState({ otp: ['', '', '', '', '', ''] }); self.focusBox(0); }, 600);
+      }
+    }, 700);
+  }
+  renderVals() {
+    var self = this, s = this.state;
+    var isLogin = s.mode === 'login';
+    var e = s.err || {};
+    var boxes = s.otp.map(function (v, i) {
+      var bd = '#CBD5E1', bg = '#FFFFFF';
+      if (s.otpState === 'error') { bd = '#DC2626'; bg = '#FEF2F2'; }
+      else if (v) { bd = '#1A365D'; }
+      return {
+        v: v, gap: i === 3, auto: i === 0 ? 'one-time-code' : 'off', label: 'Kod hanesi ' + (i + 1) + ' / 6', bd: bd, bg: bg,
+        ref: function (el) { self.boxEls[i] = el; },
+        onFocus: function (ev) { if (ev.target.select) ev.target.select(); },
+        onChange: function (ev) {
+          var d = (ev.target.value || '').replace(/\D/g, '');
+          if (!d) { var o = self.state.otp.slice(); o[i] = ''; self.setState({ otp: o }); return; }
+          if (d.length > 2) { self.writeDigits(0, d.slice(0, 6).split('')); return; }
+          self.writeDigits(i, [d.slice(-1)]);
+        },
+        onKey: function (ev) {
+          var o = self.state.otp;
+          if (ev.key === 'Backspace' && !o[i] && i > 0) { ev.preventDefault(); var n = o.slice(); n[i - 1] = ''; self.setState({ otp: n, otpState: 'idle' }); self.focusBox(i - 1); }
+          else if (ev.key === 'ArrowLeft' && i > 0) { ev.preventDefault(); self.focusBox(i - 1); }
+          else if (ev.key === 'ArrowRight' && i < 5) { ev.preventDefault(); self.focusBox(i + 1); }
+        },
+        onPaste: function (ev) {
+          var t = ((ev.clipboardData && ev.clipboardData.getData('text')) || '').replace(/\D/g, '').slice(0, 6);
+          if (!t) return; ev.preventDefault(); self.writeDigits(t.length === 6 ? 0 : i, t.split(''));
+        }
+      };
+    });
+    var mm = Math.floor(s.secs / 60), ss = s.secs % 60;
+    var canResend = s.secs === 0;
+    return {
+      isForm: s.step === 'form', isOtp: s.step === 'otp', isSuccess: s.step === 'success',
+      formAnim: s.back ? 'slideb' : 'up',
+      isLogin: isLogin, isSignup: !isLogin, pillX: isLogin ? 0 : 100,
+      tabLoginFg: isLogin ? '#1A365D' : '#6B7280', tabSignupFg: isLogin ? '#6B7280' : '#1A365D',
+      title: isLogin ? 'Yeniden Merhaba!' : 'Hesabınızı oluşturun',
+      subtitle: isLogin ? 'Kaldığınız yerden devam etmek için giriş yapın.' : 'Okul bilgileriniz her evraka otomatik işlensin.',
+      cta: isLogin ? 'Giriş Yap' : 'Hesap Oluştur', loadingLabel: isLogin ? 'Kontrol ediliyor…' : 'Hesap oluşturuluyor…',
+      toLogin: function () { self.setState({ mode: 'login', err: {} }); },
+      toSignup: function () { self.setState({ mode: 'signup', err: {} }); },
+      name: s.name, email: s.email, password: s.password,
+      onName: function (ev) { var er = Object.assign({}, self.state.err); delete er.name; self.setState({ name: ev.target.value, err: er }); },
+      onEmail: function (ev) { var er = Object.assign({}, self.state.err); delete er.email; self.setState({ email: ev.target.value, err: er }); },
+      onPw: function (ev) { var er = Object.assign({}, self.state.err); delete er.password; self.setState({ password: ev.target.value, err: er }); },
+      err: e,
+      nameBad: !!e.name, emailBad: !!e.email, pwBad: !!e.password, kvkkBad: !!e.kvkk,
+      nameCls: e.name ? 'bad' : '', emailCls: e.email ? 'bad' : '', pwCls: e.password ? 'bad' : '',
+      pwHint: !isLogin && !e.password,
+      showPw: s.showPw, hidePw: !s.showPw, pwType: s.showPw ? 'text' : 'password', pwAuto: isLogin ? 'current-password' : 'new-password',
+      pwToggleLabel: s.showPw ? 'Şifreyi gizle' : 'Şifreyi göster',
+      togglePw: function () { self.setState({ showPw: !self.state.showPw }); },
+      remember: s.remember, onRemember: function (ev) { self.setState({ remember: ev.target.checked }); },
+      kvkk: s.kvkk, onKvkk: function (ev) { var er = Object.assign({}, self.state.err); delete er.kvkk; self.setState({ kvkk: ev.target.checked, err: er }); },
+      loading: s.loading, notLoading: !s.loading,
+      submit: function (ev) { self.submit(ev); },
+      boxes: boxes,
+      verifying: s.otpState === 'verifying', otpErr: s.otpState === 'error', otpSuccess: s.otpState === 'success', notOtpSuccess: s.otpState !== 'success',
+      shakeCls: s.otpState === 'error' ? 'shake' : '',
+      timer: (mm < 10 ? '0' : '') + mm + ':' + (ss < 10 ? '0' : '') + ss,
+      timerFg: canResend ? '#9CA3AF' : '#0F1E36',
+      cantResend: !canResend, resendFg: canResend ? '#2563EB' : '#9CA3AF', resendCursor: canResend ? 'pointer' : 'not-allowed',
+      resend: function () { if (self.state.secs > 0) return; self.setState({ otp: ['', '', '', '', '', ''], otpState: 'idle', sent: true }); self.startTimer(); self.focusBox(0); self.t4 = setTimeout(function () { self.setState({ sent: false }); }, 3500); },
+      sent: s.sent,
+      successBadge: s.returning ? 'Bu cihaz tanındı · kod gerekmedi' : 'E-posta adresiniz doğrulandı',
+      successTitle: s.returning ? 'Tekrar hoş geldiniz, Öğretmenim!' : 'Hoş geldiniz, Öğretmenim!',
+      back: function () { clearInterval(self.iv); self.setState({ step: 'form', back: true, otpState: 'idle' }); },
+      restart: function () { clearInterval(self.iv); self.setState({ step: 'form', back: false, password: '', otp: ['', '', '', '', '', ''], otpState: 'idle' }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

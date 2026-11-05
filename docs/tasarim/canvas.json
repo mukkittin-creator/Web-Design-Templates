@@ -1,0 +1,38 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Auth.dc.html": {"expand": "fill", "h": 900, "is_interactive": true, "title": "Giriş / Kayıt / E-posta kodu (interaktif)", "w": 1440, "x": 0, "y": 4060},
+    "AuthMobile.dc.html": {"h": 844, "title": "Mobil · Doğrulama kodu", "w": 390, "x": 1520, "y": 4060},
+    "AuthStates.dc.html": {"h": 900, "title": "Auth durumları · alan, buton, kod", "w": 1440, "x": 1990, "y": 4060},
+    "Main.dc.html": {"expand": "fill", "h": 3660, "is_interactive": true, "title": "Masaüstü · Açılış + Sihirbaz (interaktif)", "w": 1440, "x": 0, "y": 0},
+    "Maintenance.dc.html": {"expand": "fill", "h": 900, "is_interactive": true, "title": "Bakım modu", "w": 1440, "x": 1520, "y": 5380},
+    "Mobile.dc.html": {"h": 3080, "title": "Mobil · 390", "w": 390, "x": 1520, "y": 0},
+    "NotFound.dc.html": {"expand": "fill", "h": 900, "is_interactive": true, "title": "404 · Aradığınız sayfa bulunamadı", "w": 1440, "x": 0, "y": 5380},
+    "States.dc.html": {"h": 1300, "title": "Durumlar · hover, aktif, yükleniyor, boş", "w": 1440, "x": 1990, "y": 0},
+    "V2Home.dc.html": {"page": "v2", "expand": "fill", "h": 1000, "is_interactive": true, "title": "v2 · Sihirbaz (interaktif)", "w": 1440, "x": 0, "y": 0},
+    "V2Mobile.dc.html": {"page": "v2", "h": 844, "title": "v2 · Mobil", "w": 390, "x": 1520, "y": 0},
+    "V2Screens.dc.html": {"page": "v2", "h": 900, "title": "v2 · Giriş, 404, Bakım (aynı iskelet)", "w": 1440, "x": 1990, "y": 0},
+    "V2System.dc.html": {"page": "v2", "h": 1100, "title": "v2 · Dört ilke: tasarım sistemi", "w": 1440, "x": 0, "y": 1400},
+    "V3Home.dc.html": {"page": "v3", "expand": "fill", "h": 2760, "is_interactive": true, "title": "v3 · Birleşik açılış + canlı sihirbaz", "w": 1440, "x": 0, "y": 0},
+    "V3Mobile.dc.html": {"page": "v3", "h": 844, "title": "v3 · Mobil", "w": 390, "x": 1520, "y": 0},
+    "V3School.dc.html": {"page": "v3", "expand": "fill", "h": 900, "is_interactive": true, "title": "v3 · Okul idare paneli (Okul paketi)", "w": 1440, "x": 1990, "y": 0}
+  },
+  "createdOnFiles": {"at": "2026-11-05T18:20:00Z", "v": 1},
+  "designSystems": [
+    {"artifact": "https://claude.ai/code/artifact/46b28c38-5631-42e5-bf83-9f432a8a9f06", "copiedAt": "2026-11-05T18:20:00Z", "namespace": "evrak-sihirbazi", "title": "Evrak Sihirbazı", "version": "1793902603-b704"}
+  ],
+  "launch": {"view": "canvas", "page": "v3"},
+  "noteOrder": ["title", "authTitle", "sysTitle", "v2Title", "v2SysTitle", "v3Title"],
+  "notes": {
+    "authTitle": {"kind": "title1", "maxW": 3430, "text": "Giriş · Kayıt · E-posta doğrulama", "w": 240, "x": 0, "y": 3760},
+    "sysTitle": {"kind": "title1", "maxW": 2960, "text": "Sistem sayfaları · 404 ve Bakım", "w": 240, "x": 0, "y": 5080},
+    "title": {"kind": "title1", "maxW": 3430, "text": "evraksihirbazi.com — Sihirli Kontrol Listesi", "w": 240, "x": 0, "y": -300},
+    "v2Title": {"kind": "title1", "page": "v2", "maxW": 3430, "text": "v2 · Sade: tek soru, tek düğme", "x": 0, "y": -300},
+    "v2SysTitle": {"kind": "title1", "page": "v2", "maxW": 1440, "text": "Arkadaki sistem", "x": 0, "y": 1100},
+    "v3Title": {"kind": "title1", "page": "v3", "maxW": 3430, "text": "v3 · Birleşik: ürünün kendisi vitrin", "x": 0, "y": -300}
+  },
+  "order": ["Main.dc.html", "Mobile.dc.html", "States.dc.html", "Auth.dc.html", "AuthMobile.dc.html", "AuthStates.dc.html", "NotFound.dc.html", "Maintenance.dc.html", "V2Home.dc.html", "V2Mobile.dc.html", "V2Screens.dc.html", "V2System.dc.html", "V3Home.dc.html", "V3Mobile.dc.html", "V3School.dc.html"],
+  "pages": [{"id": "page-1", "name": "v1 · İlk tasarım"}, {"id": "v2", "name": "v2 · Sade"}, {"id": "v3", "name": "v3 · Birleşik"}],
+  "title": "evraksihirbazi.com — Sihirli Kontrol Listesi"
+}

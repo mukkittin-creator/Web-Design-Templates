@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>evraksihirbazi.com — v2 Sihirbaz</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F9FC}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+.i{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.i2{stroke-width:2.6}
+button,select{font-family:inherit}
+.tr{transition:background-color .15s ease,border-color .15s ease,box-shadow .18s ease,transform .12s ease,color .15s ease}
+.fx:focus-visible{outline:3px solid #93C5FD;outline-offset:2px}
+.tile:hover{border-color:#1A365D !important;box-shadow:0 10px 24px -12px rgba(15,30,54,.35) !important;transform:translateY(-2px)}
+.tile:active{transform:translateY(0) scale(.99)}
+.big:hover:not([disabled]){background:#1D4ED8 !important}
+.big:active:not([disabled]){transform:scale(.99)}
+.rowbtn:hover:not([disabled]){border-color:#1A365D !important;background:#F7F9FC !important}
+.rowbtn:active:not([disabled]){transform:scale(.98)}
+.ghost:hover{background:#EEF2F7 !important}
+.circ:hover{border-color:#1A365D !important}
+@keyframes v-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.in{animation:v-in .35s cubic-bezier(.2,.9,.3,1) both}
+@keyframes v-pop{0%{transform:scale(.5)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.pop{animation:v-pop .28s cubic-bezier(.2,.9,.3,1) both}
+@keyframes v-spin{to{transform:rotate(360deg)}}
+.spin{animation:v-spin .8s linear infinite}
+@keyframes v-shim{from{background-position:200% 0}to{background-position:-200% 0}}
+.shim{background:linear-gradient(90deg,#EEF2F7 0%,#E0F2FE 50%,#EEF2F7 100%);background-size:200% 100%;animation:v-shim 1.2s linear infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</helmet>
+<div style="min-height: 1000px; background: #F7F9FC; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0F172A; font-size: 17px; line-height: 26px; display: flex; flex-direction: column;">
+
+<header style="max-width: 760px; width: 100%; margin: 0 auto; padding: 24px 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+<img src="/_blob/54a5b75989dd8cd457b46406a1a56bb8" alt="evraksihirbazi.com" style="height: 20px; width: auto;">
+<a href="#" class="tr ghost fx" style="min-height: 44px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 12px; font-size: 15px; font-weight: 700; text-decoration: none; color: #1A365D;">Giriş yap</a>
+</header>
+
+<main style="flex: 1 1 auto; max-width: 760px; width: 100%; margin: 0 auto; padding: 24px 20px 80px; box-sizing: border-box;">
+
+<!-- ===== STEP 1: ne zaman? ===== -->
+<sc-if value="{{ isStep1 }}" hint-placeholder-val="{{ false }}">
+<section class="in" aria-labelledby="q1" style="display: flex; flex-direction: column; gap: 28px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 14px; line-height: 20px; font-weight: 700; color: #475569;">Adım 1 / 2</span>
+<h1 id="q1" style="margin: 0; font-family: Lexend, sans-serif; font-size: 40px; line-height: 48px; font-weight: 600; letter-spacing: -0.02em; color: #0F172A;">Hangi evrak işini bitirelim?</h1>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px;">
+<sc-for list="{{ surecTiles }}" as="t" hint-placeholder-count="4">
+<button type="button" class="tr tile fx" onClick="{{ t.pick }}" style="min-height: 112px; display: flex; align-items: center; gap: 16px; padding: 20px; border-radius: 18px; border: 1.5px solid #E2E8F0; background: #FFFFFF; text-align: left; cursor: pointer; box-shadow: 0 1px 2px rgba(15,30,54,.05);">
+<span style="width: 52px; height: 52px; flex-shrink: 0; border-radius: 14px; background: #EFF4FF; color: #1D4ED8; display: flex; align-items: center; justify-content: center; font-family: Lexend, sans-serif; font-size: 20px; font-weight: 600;">{{ t.n }}</span>
+<span style="display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 19px; line-height: 26px; font-weight: 700; color: #0F172A;">{{ t.label }}</span><span style="font-size: 15px; line-height: 22px; color: #475569;">{{ t.hint }}</span></span>
+</button>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 22px; color: #475569;">Kayıt gerekmez. Verileriniz bu tarayıcıda kalır.</p>
+</section>
+</sc-if>
+
+<!-- ===== STEP 2: göreviniz? ===== -->
+<sc-if value="{{ isStep2 }}" hint-placeholder-val="{{ false }}">
+<section class="in" aria-labelledby="q2" style="display: flex; flex-direction: column; gap: 28px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<button type="button" class="tr ghost fx" onClick="{{ toStep1 }}" style="align-self: flex-start; min-height: 40px; margin-left: -10px; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; border-radius: 10px; border: 0; background: transparent; color: #475569; font-size: 15px; font-weight: 700; cursor: pointer;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Adım 2 / 2 · {{ surecLabel }}</button>
+<h1 id="q2" style="margin: 0; font-family: Lexend, sans-serif; font-size: 40px; line-height: 48px; font-weight: 600; letter-spacing: -0.02em; color: #0F172A;">Göreviniz ne?</h1>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px;">
+<sc-for list="{{ gorevTiles }}" as="t" hint-placeholder-count="4">
+<button type="button" class="tr tile fx" onClick="{{ t.pick }}" style="min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 22px; border-radius: 18px; border: 1.5px solid #E2E8F0; background: #FFFFFF; text-align: left; cursor: pointer; font-size: 19px; line-height: 26px; font-weight: 700; color: #0F172A; box-shadow: 0 1px 2px rgba(15,30,54,.05);">{{ t.label }}<svg class="i" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="color: #94A3B8;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+</sc-for>
+</div>
+</section>
+</sc-if>
+
+<!-- ===== LOADING ===== -->
+<sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
+<section aria-busy="true" style="display: flex; flex-direction: column; gap: 20px;">
+<span style="display: inline-flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 600; color: #475569;"><svg class="i spin" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color: #1D4ED8;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Listeniz hazırlanıyor…</span>
+<div class="shim" style="height: 44px; width: 60%; border-radius: 10px;"></div>
+<div class="shim" style="height: 64px; border-radius: 16px;"></div>
+<div style="border-radius: 18px; background: #FFFFFF; border: 1px solid #E2E8F0; padding: 8px 18px;"><div class="shim" style="height: 18px; margin: 20px 0; border-radius: 6px;"></div><div class="shim" style="height: 18px; margin: 20px 0; width: 80%; border-radius: 6px;"></div><div class="shim" style="height: 18px; margin: 20px 0; width: 70%; border-radius: 6px;"></div></div>
+</section>
+</sc-if>
+
+<!-- ===== RESULT ===== -->
+<sc-if value="{{ isResult }}" hint-placeholder-val="{{ true }}">
+<section class="in" aria-labelledby="qr" style="display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 15px; line-height: 22px; color: #475569; font-weight: 600;">{{ summary }}<button type="button" class="tr ghost fx" onClick="{{ toStep1 }}" style="min-height: 36px; padding: 0 8px; border-radius: 8px; border: 0; background: transparent; color: #1D4ED8; font-size: 15px; font-weight: 700; cursor: pointer;">Değiştir</button></div>
+<h1 id="qr" style="margin: 0; font-family: Lexend, sans-serif; font-size: 40px; line-height: 48px; font-weight: 600; letter-spacing: -0.02em; color: #0F172A;">{{ headline }}</h1>
+<div role="progressbar" aria-label="Dosyanın hazır olma oranı" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ pct }}" style="height: 8px; border-radius: 999px; background: #E2E8F0; overflow: hidden; margin-top: 6px;"><div style="height: 100%; width: {{ pct }}%; border-radius: 999px; background: {{ barColor }}; transition: width .5s cubic-bezier(.2,.9,.3,1);"></div></div>
+</div>
+
+<sc-if value="{{ hasBulk }}" hint-placeholder-val="{{ true }}">
+<button type="button" class="tr big fx" onClick="{{ bulk }}" disabled="{{ bulkBusy }}" aria-busy="{{ bulkBusy }}" style="min-height: 68px; display: flex; align-items: center; justify-content: center; gap: 12px; border-radius: 18px; border: 0; background: #2563EB; color: #FFFFFF; font-size: 19px; line-height: 24px; font-weight: 700; cursor: pointer; box-shadow: 0 12px 28px -12px rgba(37,99,235,.7);">
+<sc-if value="{{ bulkBusy }}" hint-placeholder-val="{{ false }}"><svg class="i spin" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Hazırlanıyor…</sc-if>
+<sc-if value="{{ bulkIdle }}" hint-placeholder-val="{{ true }}"><svg class="i" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/></svg>{{ bulkLabel }}</sc-if>
+</button>
+<sc-if value="{{ hasBulkNote }}" hint-placeholder-val="{{ true }}"><p style="margin: -10px 0 0; text-align: center; font-size: 15px; line-height: 22px; color: #475569;">{{ bulkNote }}</p></sc-if>
+</sc-if>
+<sc-if value="{{ allDone }}" hint-placeholder-val="{{ false }}">
+<div class="in" role="status" style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 18px; background: #F0FDF4; border: 1px solid #BBF7D0;"><span class="pop" style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 999px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size: 17px; line-height: 24px;"><b style="font-weight: 700;">Dosyanız tamam.</b> Gerisi sizin zamanınız.</span></div>
+</sc-if>
+
+<ul aria-label="Evraklar" style="list-style: none; margin: 0; padding: 0; border-radius: 18px; background: #FFFFFF; border: 1px solid #E2E8F0; overflow: hidden;">
+<sc-for list="{{ rows }}" as="r" hint-placeholder-count="6">
+<li style="display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-top: {{ r.topBorder }};">
+<button type="button" class="tr circ fx" onClick="{{ r.toggle }}" aria-pressed="{{ r.done }}" aria-label="{{ r.toggleLabel }}" style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 999px; border: 2px solid {{ r.cBd }}; background: {{ r.cBg }}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;"><sc-if value="{{ r.done }}" hint-placeholder-val="{{ false }}"><svg class="i i2 pop" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></sc-if><sc-if value="{{ r.isMid }}" hint-placeholder-val="{{ false }}"><span style="width: 10px; height: 10px; border-radius: 999px; background: #D97706;"></span></sc-if></button>
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 2px;">
+<div style="display: flex; align-items: center; gap: 6px;"><span style="font-size: 17px; line-height: 24px; font-weight: 700; color: {{ r.nameFg }};">{{ r.ad }}</span><button type="button" class="tr ghost fx" onClick="{{ r.help }}" aria-expanded="{{ r.helpOpen }}" aria-label="{{ r.helpLabel }}" style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 999px; border: 0; background: transparent; color: #94A3B8; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></button></div>
+<sc-if value="{{ r.hasSub }}" hint-placeholder-val="{{ false }}"><span style="font-size: 15px; line-height: 22px; font-weight: 600; color: {{ r.subFg }};">{{ r.sub }}</span></sc-if>
+<sc-if value="{{ r.helpOpen }}" hint-placeholder-val="{{ false }}"><p class="in" style="margin: 6px 0 0; font-size: 15px; line-height: 23px; color: #334155;">{{ r.neden }} <span style="color: #475569;">Nereden: {{ r.nereden }}.</span></p></sc-if>
+</div>
+<sc-if value="{{ r.showAct }}" hint-placeholder-val="{{ true }}">
+<button type="button" class="tr rowbtn fx" onClick="{{ r.act }}" disabled="{{ r.busy }}" aria-busy="{{ r.busy }}" style="flex-shrink: 0; min-width: 120px; min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; border-radius: 12px; border: 1.5px solid #CBD5E1; background: #FFFFFF; color: #0F172A; font-size: 16px; line-height: 20px; font-weight: 700; cursor: pointer;"><sc-if value="{{ r.busy }}" hint-placeholder-val="{{ false }}"><svg class="i spin" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg></sc-if><sc-if value="{{ r.notBusy }}" hint-placeholder-val="{{ true }}">{{ r.actLabel }}</sc-if></button>
+</sc-if>
+<sc-if value="{{ r.done }}" hint-placeholder-val="{{ false }}"><span style="flex-shrink: 0; min-width: 120px; text-align: center; font-size: 16px; font-weight: 700; color: #15803D;">Hazır</span></sc-if>
+</li>
+</sc-for>
+</ul>
+<p style="margin: 0; font-size: 14px; line-height: 21px; color: #475569;">Liste bir rehberdir; okulunuzun uygulaması farklı olabilir.</p>
+</section>
+</sc-if>
+</main>
+
+<footer style="max-width: 760px; width: 100%; margin: 0 auto; padding: 0 20px 28px; box-sizing: border-box; font-size: 14px; line-height: 21px; color: #475569; display: flex; flex-wrap: wrap; gap: 6px 18px;">
+<span>MEB ile bağlantılı değildir</span><a href="#" style="color: #475569;">KVKK</a><a href="#" style="color: #475569;">Gizlilik</a><a href="#" style="color: #475569;">Yardım</a>
+</footer>
+
+<sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+<div class="in" role="status" style="position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 20; max-width: calc(100% - 32px); display: flex; align-items: center; gap: 16px; padding: 12px 12px 12px 18px; border-radius: 14px; background: #0F172A; color: #FFFFFF; font-size: 15px; line-height: 22px; box-shadow: 0 16px 32px -12px rgba(15,23,42,.5);">
+<span>{{ toastMsg }}</span>
+<sc-if value="{{ canUndo }}" hint-placeholder-val="{{ true }}"><button type="button" class="fx" onClick="{{ undo }}" style="min-height: 40px; padding: 0 12px; border-radius: 10px; border: 0; background: rgba(255,255,255,.12); color: #FFFFFF; font-size: 15px; font-weight: 700; cursor: pointer;">Geri al</button></sc-if>
+</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"baslangic":{"editor":"enum","options":["geri-donen","ilk-ziyaret"],"default":"geri-donen","section":"Akış"},"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    var back = (props.baslangic || 'geri-donen') === 'geri-donen';
+    this.state = {
+      step: back ? 'result' : 'surec',
+      surec: back ? 'donembasi' : '',
+      gorev: back ? 'brans' : '',
+      st: back ? { yillik: 'done', zumre: 'done', program: 'done' } : {},
+      busy: {}, help: '', bulkBusy: false, toast: null
+    };
+  }
+  componentWillUnmount() { clearTimeout(this.t); clearTimeout(this.tt); clearTimeout(this.tb); }
+
+  /* ---- Veri (dışarıya yalnızca liste olarak açılır) ---- */
+  docs(surec, gorev) {
+    var D = {
+      donembasi: [
+        ['yillik', 'Yıllık Plan', 'arac', 'Dersin yıl boyu nasıl işleneceğini gösterir; denetimde ilk istenir.', 'Yıllık Plan aracı, müdür onayı'],
+        ['zumre', 'Zümre Tutanağı', 'arac', 'Ortak ölçme kararlarını kayda geçirir.', 'Zümre şablonu, zümre başkanı imzası'],
+        ['sok', 'ŞÖK Tutanağı', 'imza', 'Sınıfa özel kurul kararlarıdır; imza ve mühürle geçerli olur.', 'ŞÖK şablonu, okul idaresi'],
+        ['program', 'Ders Programı', 'dis', 'Girdiğiniz derslerin gün ve saatleri.', 'e-Okul'],
+        ['bgh', 'Belirli Gün ve Haftalar', 'arac', 'Yıl içindeki anma ve kutlamalarda görev dağılımı.', 'Belirli Gün ve Haftalar aracı'],
+        ['olcme', 'Ortak Sınav Takvimi', 'dis', 'Yazılı tarihlerinin zümrece ortaklaştırıldığını gösterir.', 'Zümre kararı, e-Okul']
+      ],
+      sinav: [
+        ['kagit', 'Sınav Kağıdı (A/B)', 'arac', 'Kazanımlara göre, puanları belirtilmiş sınav kağıdı.', 'Sınav Kağıdı aracı'],
+        ['anahtar', 'Cevap Anahtarı', 'arac', 'Puanlamanın şeffaf yapıldığını gösterir.', 'Sınav Kağıdı aracı'],
+        ['optik', 'Optik Form', 'arac', 'Çoktan seçmeli bölümün hızlı okunması için.', 'Optik Form aracı'],
+        ['analiz', 'Sınav Analizi', 'arac', 'Soru ve konu bazında başarıyı gösterir.', 'Sınav Analizi aracı'],
+        ['eokul', 'Notların e-Okul Girişi', 'dis', 'Notlar e-Okul\'a süresi içinde girilmelidir.', 'e-Okul'],
+        ['teslim', 'Sınav Teslim Tutanağı', 'imza', 'Kağıtların arşive teslimini kayda geçirir.', 'Okul idaresi']
+      ],
+      bep: [
+        ['ram', 'RAM Raporu', 'dis', 'Öğrencinin kaynaştırma kapsamında olduğunu gösterir.', 'Rehberlik ve Araştırma Merkezi'],
+        ['birim', 'BEP Birimi Kararı', 'imza', 'Birim üyelerini ve alınan kararları resmîleştirir.', 'Okul BEP birimi'],
+        ['bepplan', 'BEP Planı', 'arac', 'Öğrencinin düzeyine göre amaçları belirler.', 'BEP Robotu'],
+        ['kaba', 'Kaba Değerlendirme Formu', 'arac', 'Mevcut performansı ölçer.', 'BEP Robotu'],
+        ['veli', 'Veli Bilgilendirme Formu', 'imza', 'Velinin bilgilendirildiğini gösterir.', 'Veli imzası']
+      ],
+      donemsonu: [
+        ['karne', 'Karne Görüşleri', 'arac', 'Her öğrenci için kişiye özel değerlendirme.', 'Karne Görüşü aracı'],
+        ['takdir', 'Teşekkür / Takdir Listesi', 'arac', 'Belge alabilecek öğrencilerin ön listesi.', 'Belge hesaplama aracı'],
+        ['zumresonu', 'Zümre Dönem Sonu Tutanağı', 'arac', 'Dönem başı kararlarının değerlendirmesi.', 'Zümre şablonu'],
+        ['soksonu', 'ŞÖK Dönem Sonu Tutanağı', 'imza', 'Sınıfın dönem sonu kararları.', 'ŞÖK şablonu, okul idaresi']
+      ]
+    };
+    var list = (D[surec] || []).slice();
+    if ((gorev === 'sinif' || gorev === 'rehber') && surec === 'donembasi') list.push(['velitop', 'Veli Toplantısı Tutanağı', 'imza', 'Toplantı kararlarını ve katılımı kayda geçirir.', 'Veli toplantısı şablonu']);
+    if (gorev === 'zumre') list.push(['zumrerapor', 'Zümre Başkanı Raporu', 'imza', 'Zümre kararlarının özetini müdüre iletir.', 'Zümre aracı, müdür onayı']);
+    return list.map(function (d) { return { id: d[0], ad: d[1], tip: d[2], neden: d[3], nereden: d[4] }; });
+  }
+
+  /* ---- Çok biçimlilik: aynı "yap" mesajı, türe göre farklı davranış ---- */
+  kind(tip) {
+    return {
+      arac: { first: 'Hazırla', afterFirst: 'done', firstToast: function (d) { return d.ad + ' hazır, indirildi.'; } },
+      imza: { first: 'Yazdır', afterFirst: 'mid', mid: 'İmzalandı', midText: 'Çıktıyı imzaya ve mühüre götürün.', firstToast: function (d) { return d.ad + ' yazdırıldı. İmzadan sonra işaretleyin.'; } },
+      dis: { first: 'Aç ↗', afterFirst: 'mid', mid: 'Aldım', midText: 'Belgeyi aldıysanız işaretleyin.', firstToast: function (d) { return d.nereden + ' yeni sekmede açıldı.'; } }
+    }[tip];
+  }
+
+  /* ---- Kapsülleme: durum yalnızca bu metotlarla değişir ---- */
+  showToast(msg, prev) {
+    var self = this;
+    clearTimeout(this.tt);
+    this.setState({ toast: { msg: msg, prev: prev || null } });
+    this.tt = setTimeout(function () { self.setState({ toast: null }); }, 6000);
+  }
+  setStatus(id, next, toastMsg) {
+    var prev = Object.assign({}, this.state.st);
+    var st = Object.assign({}, this.state.st); st[id] = next;
+    var busy = Object.assign({}, this.state.busy); delete busy[id];
+    this.setState({ st: st, busy: busy });
+    if (toastMsg) this.showToast(toastMsg, prev);
+  }
+  act(d) {
+    var self = this, cur = this.state.st[d.id] || 'todo', k = this.kind(d.tip);
+    if (cur === 'done' || this.state.busy[d.id]) return;
+    if (cur === 'mid') { this.setStatus(d.id, 'done', d.ad + ' tamamlandı.'); return; }
+    var busy = Object.assign({}, this.state.busy); busy[d.id] = true;
+    this.setState({ busy: busy });
+    this.t = setTimeout(function () { self.setStatus(d.id, k.afterFirst, k.firstToast(d)); }, d.tip === 'arac' ? 900 : 500);
+  }
+  bulk() {
+    var self = this, s = this.state;
+    var todo = this.docs(s.surec, s.gorev).filter(function (d) { return d.tip === 'arac' && (s.st[d.id] || 'todo') !== 'done'; });
+    if (!todo.length || s.bulkBusy) return;
+    var prev = Object.assign({}, s.st);
+    this.setState({ bulkBusy: true });
+    this.tb = setTimeout(function () {
+      var st = Object.assign({}, self.state.st);
+      todo.forEach(function (d) { st[d.id] = 'done'; });
+      self.setState({ st: st, bulkBusy: false });
+      self.showToast(todo.length + ' evrak hazır, tek Word dosyası olarak indirildi.', prev);
+    }, 1300);
+  }
+  pickSurec(id) { this.setState({ surec: id, step: 'gorev' }); }
+  pickGorev(id) {
+    var self = this;
+    this.setState({ gorev: id, step: 'loading', st: {}, help: '' });
+    this.t = setTimeout(function () { self.setState({ step: 'result' }); }, 650);
+  }
+
+  renderVals() {
+    var self = this, s = this.state;
+    var SUREC = [['donembasi', 'Dönem başı', 'Yıllık plan, tutanaklar'], ['sinav', 'Yazılı sınav', 'Sınav kağıdı, analiz'], ['bep', 'BEP / Kaynaştırma', 'BEP planı, formlar'], ['donemsonu', 'Dönem sonu', 'Karne, takdir, tutanaklar']];
+    var GOREV = [['brans', 'Branş öğretmeni'], ['sinif', 'Sınıf öğretmeni'], ['rehber', 'Sınıf rehber öğretmeni'], ['zumre', 'Zümre başkanı']];
+    var label = function (arr, id) { for (var i = 0; i < arr.length; i++) if (arr[i][0] === id) return arr[i][1]; return ''; };
+    var docs = (s.surec && s.gorev) ? this.docs(s.surec, s.gorev) : [];
+    var done = 0, aracLeft = 0;
+    var rows = docs.map(function (d, i) {
+      var cur = s.st[d.id] || 'todo', k = self.kind(d.tip), isDone = cur === 'done', isMid = cur === 'mid';
+      if (isDone) done++;
+      if (d.tip === 'arac' && !isDone) aracLeft++;
+      var open = s.help === d.id;
+      return {
+        ad: d.ad, neden: d.neden, nereden: d.nereden,
+        done: isDone, isMid: isMid, showAct: !isDone, busy: !!s.busy[d.id], notBusy: !s.busy[d.id],
+        actLabel: isMid ? k.mid : k.first,
+        hasSub: isMid, sub: isMid ? k.midText : '', subFg: '#B45309',
+        nameFg: isDone ? '#64748B' : '#0F172A',
+        cBd: isDone ? '#15803D' : (isMid ? '#D97706' : '#CBD5E1'), cBg: isDone ? '#15803D' : '#FFFFFF',
+        topBorder: i === 0 ? '0' : '1px solid #EEF1F6',
+        helpOpen: open, helpLabel: d.ad + ': neden gerekli, nereden alınır?',
+        toggleLabel: (isDone ? 'İşareti kaldır: ' : 'Hazır olarak işaretle: ') + d.ad,
+        act: function () { self.act(d); },
+        toggle: function () { self.setStatus(d.id, isDone ? 'todo' : 'done', isDone ? null : d.ad + ' işaretlendi.'); },
+        help: function () { self.setState({ help: open ? '' : d.id }); }
+      };
+    });
+    var total = rows.length, left = total - done, pct = total ? Math.round(done / total * 100) : 0;
+    var all = total > 0 && left === 0;
+    return {
+      isStep1: s.step === 'surec', isStep2: s.step === 'gorev', isLoading: s.step === 'loading', isResult: s.step === 'result',
+      surecTiles: SUREC.map(function (x, i) { return { n: i + 1, label: x[1], hint: x[2], pick: function () { self.pickSurec(x[0]); } }; }),
+      gorevTiles: GOREV.map(function (x) { return { label: x[1], pick: function () { self.pickGorev(x[0]); } }; }),
+      surecLabel: label(SUREC, s.surec),
+      toStep1: function () { self.setState({ step: 'surec', help: '', toast: null }); },
+      summary: label(SUREC, s.surec) + ' · ' + label(GOREV, s.gorev),
+      headline: all ? 'Hepsi hazır.' : (left + ' evrak eksik.'),
+      pct: pct, barColor: all ? '#15803D' : '#2563EB',
+      rows: rows,
+      hasBulk: aracLeft > 0, bulkBusy: s.bulkBusy, bulkIdle: !s.bulkBusy,
+      bulkLabel: aracLeft === 1 ? 'Bu evrakı tek tıkla hazırla' : (aracLeft + ' evrakı tek tıkla hazırla'),
+      hasBulkNote: left - aracLeft > 0,
+      bulkNote: 'Kalan ' + (left - aracLeft) + ' evrak imza veya e-Okul ister; aşağıdan tek düğmeyle ilerleyin.',
+      bulk: function () { self.bulk(); },
+      allDone: all,
+      hasToast: !!s.toast, toastMsg: s.toast ? s.toast.msg : '', canUndo: !!(s.toast && s.toast.prev),
+      undo: function () { if (!self.state.toast || !self.state.toast.prev) return; clearTimeout(self.tt); self.setState({ st: self.state.toast.prev, toast: null }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

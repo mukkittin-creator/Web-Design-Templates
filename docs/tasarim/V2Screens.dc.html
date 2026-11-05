@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>v2 — Giriş, 404, Bakım</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.i{fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+button,input{font-family:inherit}
+@keyframes v-ping{0%{transform:scale(1);opacity:.6}100%{transform:scale(2.4);opacity:0}}
+.ping{animation:v-ping 1.8s cubic-bezier(0,0,.2,1) infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none !important}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 900px; box-sizing: border-box; padding: 56px 64px; background: #EEF2F7; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0F172A; display: flex; flex-direction: column; gap: 28px;">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px;">
+<h1 style="margin: 0; font-family: Lexend, sans-serif; font-size: 28px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">Aynı iskelet, üç ekran</h1>
+<span style="font-size: 15px; line-height: 22px; color: #475569;">Logo · simge · en fazla 6 kelimelik başlık · tek cümle · tek birincil düğme · tek bağlantı</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; flex: 1 1 0;">
+
+<!-- Giriş -->
+<section aria-label="Giriş ekranı" style="border-radius: 24px; background: #F7F9FC; border: 1px solid #E2E8F0; padding: 32px 28px; display: flex; flex-direction: column; gap: 20px;">
+<img src="/_blob/54a5b75989dd8cd457b46406a1a56bb8" alt="evraksihirbazi.com" style="height: 16px; width: auto; align-self: flex-start;">
+<span style="width: 56px; height: 56px; border-radius: 16px; background: #EFF4FF; color: #1D4ED8; display: flex; align-items: center; justify-content: center; margin-top: 28px;"><svg class="i" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+<div style="display: flex; flex-direction: column; gap: 8px;"><h2 style="margin: 0; font-family: Lexend, sans-serif; font-size: 30px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">Giriş yapın</h2><p style="margin: 0; font-size: 16px; line-height: 24px; color: #475569;">Şifre yok. E-postanıza tek kullanımlık kod gelir.</p></div>
+<label style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 15px; font-weight: 700;">E-posta</span><span style="min-height: 56px; display: flex; align-items: center; padding: 0 16px; border-radius: 14px; border: 1.5px solid #2563EB; box-shadow: 0 0 0 4px rgba(59,130,246,.18); background: #FFFFFF; font-size: 17px; font-weight: 500;">ayse@okul.k12.tr</span></label>
+<span style="min-height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #2563EB; color: #FFFFFF; font-size: 18px; font-weight: 700;">Kod gönder</span>
+<span style="text-align: center; font-size: 16px; font-weight: 700; color: #1D4ED8;">Google ile devam et</span>
+<div style="flex: 1 1 0;"></div>
+<span style="font-size: 13px; line-height: 19px; color: #475569;">Tanınan cihazda 30 gün kod istenmez.</span>
+</section>
+
+<!-- 404 -->
+<section aria-label="404 ekranı" style="border-radius: 24px; background: #F7F9FC; border: 1px solid #E2E8F0; padding: 32px 28px; display: flex; flex-direction: column; gap: 20px;">
+<img src="/_blob/54a5b75989dd8cd457b46406a1a56bb8" alt="evraksihirbazi.com" style="height: 16px; width: auto; align-self: flex-start;">
+<span style="width: 56px; height: 56px; border-radius: 16px; background: #EFF4FF; color: #1D4ED8; display: flex; align-items: center; justify-content: center; margin-top: 28px;"><svg class="i" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+<div style="display: flex; flex-direction: column; gap: 8px;"><h2 style="margin: 0; font-family: Lexend, sans-serif; font-size: 30px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">Bu sayfa yok</h2><p style="margin: 0; font-size: 16px; line-height: 24px; color: #475569;">Aradığınızı yazın, biz bulalım.</p></div>
+<label style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 15px; font-weight: 700;">Ne arıyordunuz?</span><span style="min-height: 56px; display: flex; align-items: center; padding: 0 16px; border-radius: 14px; border: 1.5px solid #CBD5E1; background: #FFFFFF; font-size: 17px; font-weight: 500;">zümre</span></label>
+<div style="margin-top: -12px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E2E8F0; padding: 6px;"><div style="min-height: 44px; display: flex; align-items: center; padding: 0 12px; border-radius: 10px; background: #F1F5F9; font-size: 16px; font-weight: 600;">Zümre Tutanağı</div><div style="min-height: 44px; display: flex; align-items: center; padding: 0 12px; font-size: 16px; font-weight: 600;">Zümre Dönem Sonu Tutanağı</div></div>
+<span style="min-height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #2563EB; color: #FFFFFF; font-size: 18px; font-weight: 700;">Zümre Tutanağı'na git</span>
+<span style="text-align: center; font-size: 16px; font-weight: 700; color: #1D4ED8;">Ana sayfaya dön</span>
+</section>
+
+<!-- Bakım -->
+<section aria-label="Bakım ekranı" style="border-radius: 24px; background: #F7F9FC; border: 1px solid #E2E8F0; padding: 32px 28px; display: flex; flex-direction: column; gap: 20px;">
+<img src="/_blob/54a5b75989dd8cd457b46406a1a56bb8" alt="evraksihirbazi.com" style="height: 16px; width: auto; align-self: flex-start;">
+<span style="position: relative; width: 56px; height: 56px; border-radius: 16px; background: #FFFBEB; color: #B45309; display: flex; align-items: center; justify-content: center; margin-top: 28px;"><svg class="i" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span style="position: absolute; right: -3px; top: -3px; width: 12px; height: 12px;"><span class="ping" style="position: absolute; inset: 0; border-radius: 999px; background: #F59E0B;"></span><span style="position: absolute; inset: 0; border-radius: 999px; background: #F59E0B;"></span></span></span>
+<div style="display: flex; flex-direction: column; gap: 8px;"><h2 style="margin: 0; font-family: Lexend, sans-serif; font-size: 30px; line-height: 36px; font-weight: 600; letter-spacing: -0.02em;">15 dakikaya döneriz</h2><p style="margin: 0; font-size: 16px; line-height: 24px; color: #475569;">Yeni özellikler ekliyoruz. Evraklarınız güvende.</p></div>
+<label style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 15px; font-weight: 700;">E-posta</span><span style="min-height: 56px; display: flex; align-items: center; padding: 0 16px; border-radius: 14px; border: 1.5px solid #CBD5E1; background: #FFFFFF; font-size: 17px; font-weight: 500; color: #64748B;">ornek@okul.k12.tr</span></label>
+<span style="min-height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; background: #2563EB; color: #FFFFFF; font-size: 18px; font-weight: 700;">Açılınca haber ver</span>
+<span style="text-align: center; font-size: 16px; font-weight: 700; color: #1D4ED8;">Şu an açık araçlar</span>
+<div style="flex: 1 1 0;"></div>
+<span style="font-size: 13px; line-height: 19px; color: #475569;">Acil destek: [WhatsApp] · [destek e-postası]</span>
+</section>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Auth durumları</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.i{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.i2{stroke-width:2.5}
+button{font-family:inherit}
+@keyframes es-spin{to{transform:rotate(360deg)}}
+.spin{animation:es-spin .8s linear infinite}
+@media (prefers-reduced-motion:reduce){*{animation:none !important}}
+</style>
+</helmet>
+<div style="width: 1440px; height: 900px; box-sizing: border-box; padding: 52px 64px; background: #EEF2F8; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0F1E36; display: flex; flex-direction: column; gap: 30px;">
+<div>
+<div style="font-size: 13px; line-height: 18px; font-weight: 700; color: #3774AD; letter-spacing: 0.04em; text-transform: uppercase;">Auth bileşen durumları</div>
+<h1 style="margin: 6px 0 0; font-family: Lexend, sans-serif; font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.02em; color: #1A365D;">Yüzen etiketli alan, butonlar ve 6 haneli kod</h1>
+</div>
+
+<!-- Fields -->
+<section style="display: flex; flex-direction: column; gap: 12px;">
+<h2 style="margin: 0; font-size: 15px; line-height: 20px; font-weight: 700; color: #1A365D;">Yüzen etiketli alan</h2>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 22px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5;">
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Boş</span>
+<div style="position: relative; height: 56px; border-radius: 12px; border: 1px solid #CBD5E1; display: flex; align-items: center; padding-left: 44px;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="position: absolute; left: 14px; color: #6B7280;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span style="font-size: 15px; color: #6B7280; font-weight: 500;">E-posta adresi</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Odak · etiket yukarı kayar</span>
+<div style="position: relative; height: 56px; border-radius: 12px; border: 1px solid #2563EB; box-shadow: 0 0 0 4px rgba(59,130,246,0.22); padding: 8px 0 0 44px; box-sizing: border-box;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="position: absolute; left: 14px; top: 18px; color: #2563EB;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div style="font-size: 12px; line-height: 14px; font-weight: 600; color: #2563EB;">E-posta adresi</div><div style="display: flex; align-items: center; height: 24px;"><span style="width: 1.5px; height: 18px; background: #2563EB;"></span></div></div></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Dolu</span>
+<div style="position: relative; height: 56px; border-radius: 12px; border: 1px solid #CBD5E1; padding: 8px 0 0 44px; box-sizing: border-box;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="position: absolute; left: 14px; top: 18px; color: #6B7280;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div style="font-size: 12px; line-height: 14px; font-weight: 600; color: #4B5563;">E-posta adresi</div><div style="font-size: 15px; line-height: 24px; font-weight: 500;">ayse@okul.k12.tr</div></div></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Hata</span>
+<div style="position: relative; height: 56px; border-radius: 12px; border: 1px solid #DC2626; background: #FEF2F2; box-shadow: 0 0 0 4px rgba(220,38,38,0.14); padding: 8px 0 0 44px; box-sizing: border-box;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="position: absolute; left: 14px; top: 18px; color: #DC2626;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><div style="font-size: 12px; line-height: 14px; font-weight: 600; color: #DC2626;">E-posta adresi</div><div style="font-size: 15px; line-height: 24px; font-weight: 500;">ayse@okul</div></div>
+<span style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #DC2626;"><svg class="i" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>Geçerli bir e-posta adresi girin.</span></div>
+</div>
+</section>
+
+<!-- Buttons -->
+<section style="display: flex; flex-direction: column; gap: 12px;">
+<h2 style="margin: 0; font-size: 15px; line-height: 20px; font-weight: 700; color: #1A365D;">Butonlar ve sekme</h2>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; padding: 22px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5; align-items: end;">
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Varsayılan</span><span style="min-height: 52px; border-radius: 12px; background: #2563EB; color: #FFFFFF; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px -6px rgba(59,130,246,0.55);">Giriş Yap</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Hover</span><span style="min-height: 52px; border-radius: 12px; background: #1D4ED8; color: #FFFFFF; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 26px -8px rgba(59,130,246,0.65);">Giriş Yap</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Yükleniyor</span><span style="min-height: 52px; border-radius: 12px; background: #2563EB; color: #FFFFFF; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px;"><svg class="i spin" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Kontrol ediliyor…</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Pasif</span><span style="min-height: 52px; border-radius: 12px; background: #E8EDF5; color: #6B7280; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center;">Giriş Yap</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Sosyal · varsayılan / hover</span><div style="display: flex; gap: 8px;"><span style="flex: 1 1 0; min-height: 48px; border-radius: 12px; border: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700;">Google</span><span style="flex: 1 1 0; min-height: 48px; border-radius: 12px; border: 1px solid #94A3B8; background: #F9FAFB; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700;">Apple</span></div></div>
+<div style="display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Sekme anahtarı</span><div style="position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 4px; border-radius: 12px; background: #F1F5F9; border: 1px solid #E8EDF5;"><span style="min-height: 40px; border-radius: 9px; background: #FFFFFF; box-shadow: 0 1px 2px rgba(15,30,54,.08), 0 2px 6px -2px rgba(15,30,54,.14); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #1A365D;">Giriş Yap</span><span style="min-height: 40px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #6B7280;">Hesap Oluştur</span></div></div>
+</div>
+</section>
+
+<!-- OTP -->
+<section style="display: flex; flex-direction: column; gap: 12px;">
+<h2 style="margin: 0; font-size: 15px; line-height: 20px; font-weight: 700; color: #1A365D;">6 haneli kod</h2>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; padding: 22px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5;">
+
+<div style="display: flex; flex-direction: column; gap: 10px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Odak (ilk kutu otomatik)</span>
+<div style="display: flex; gap: 5px; align-items: center;">
+<span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #2563EB; box-shadow: 0 0 0 4px rgba(59,130,246,0.22); display: flex; align-items: center; justify-content: center;"><span style="width: 2px; height: 22px; background: #2563EB;"></span></span>
+<span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #CBD5E1;"></span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #CBD5E1;"></span>
+<span style="width: 6px; height: 2px; background: #CBD5E1;"></span>
+<span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #CBD5E1;"></span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #CBD5E1;"></span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #CBD5E1;"></span>
+</div></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Dolduruluyor (sonraki kutuya geçer)</span>
+<div style="display: flex; gap: 5px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600;">
+<span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #1A365D; display: flex; align-items: center; justify-content: center;">1</span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #1A365D; display: flex; align-items: center; justify-content: center;">2</span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #1A365D; display: flex; align-items: center; justify-content: center;">3</span>
+<span style="width: 6px; height: 2px; background: #CBD5E1;"></span>
+<span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #2563EB; box-shadow: 0 0 0 4px rgba(59,130,246,0.22); display: flex; align-items: center; justify-content: center;"><span style="width: 2px; height: 22px; background: #2563EB;"></span></span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #CBD5E1;"></span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #CBD5E1;"></span>
+</div></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Hatalı (sallanır, temizlenir)</span>
+<div style="display: flex; gap: 5px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600; transform: translateX(-4px);">
+<span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #DC2626; background: #FEF2F2; display: flex; align-items: center; justify-content: center;">1</span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #DC2626; background: #FEF2F2; display: flex; align-items: center; justify-content: center;">2</span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #DC2626; background: #FEF2F2; display: flex; align-items: center; justify-content: center;">3</span>
+<span style="width: 6px; height: 2px; background: #FCA5A5;"></span>
+<span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #DC2626; background: #FEF2F2; display: flex; align-items: center; justify-content: center;">9</span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #DC2626; background: #FEF2F2; display: flex; align-items: center; justify-content: center;">9</span><span style="width: 40px; height: 50px; border-radius: 10px; border: 1px solid #DC2626; background: #FEF2F2; display: flex; align-items: center; justify-content: center;">9</span>
+</div>
+<span style="font-size: 12px; font-weight: 600; color: #DC2626;">Kod hatalı veya süresi dolmuş. Tekrar deneyin.</span></div>
+
+<div style="display: flex; flex-direction: column; gap: 10px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Başarılı (kutular yeşil tike dönüşür)</span>
+<div style="display: flex; align-items: center; gap: 14px; height: 50px;"><span style="width: 50px; height: 50px; border-radius: 999px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 6px rgba(34,197,94,0.18);"><svg class="i i2" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size: 15px; font-weight: 700; color: #15803D;">Kod doğrulandı</span></div></div>
+
+<div style="grid-column: span 2; display: flex; flex-direction: column; gap: 10px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Geri sayım · tekrar gönder pasif</span>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: #F9FAFB; border: 1px solid #E8EDF5;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600;">00:45</span><span style="font-size: 14px; font-weight: 700; color: #9CA3AF;">Kodu Tekrar Gönder</span></div></div>
+<div style="grid-column: span 2; display: flex; flex-direction: column; gap: 10px;"><span style="font-size: 12px; font-weight: 600; color: #6B7280;">Süre doldu · tekrar gönder aktif</span>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; border-radius: 14px; background: #F9FAFB; border: 1px solid #E8EDF5;"><span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #9CA3AF;">00:00</span><span style="font-size: 14px; font-weight: 700; color: #2563EB; text-decoration: underline;">Kodu Tekrar Gönder</span></div></div>
+</div>
+</section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

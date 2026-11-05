@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>evraksihirbazi.com — Sihirli Kontrol Listesi</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EEF2F8}
+a{color:#2563EB}a:hover{color:#1D4ED8}
+.i{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.i2{stroke-width:2.5}
+button,select{font-family:inherit}
+.tr{transition:background-color .16s ease,border-color .16s ease,box-shadow .18s ease,transform .16s ease,color .16s ease}
+.h-magic:hover{background:#1D4ED8 !important;box-shadow:0 12px 26px -8px rgba(59,130,246,.65) !important}
+.h-magic:active{transform:translateY(1px) scale(.99)}
+.h-navy:hover{background:#1E3A8A !important}
+.h-navy:active{transform:translateY(1px)}
+.h-sec:hover{border-color:#1A365D !important;background:#F9FAFB !important}
+.h-sec:active{transform:translateY(1px)}
+.h-ghost:hover{background:#E8EDF5 !important}
+.h-chip:hover{border-color:#1A365D !important}
+.h-card:hover{transform:translateY(-2px);box-shadow:0 1px 2px 0 rgba(15,30,54,.06),0 16px 32px -14px rgba(15,30,54,.32) !important}
+.h-box:hover{border-color:#2563EB !important}
+.h-link{text-decoration:none}.h-link:hover{text-decoration:underline}
+.h-nav{text-decoration:none;color:#4B5563}.h-nav:hover{color:#1A365D}
+.h-faq:hover{background:#F9FAFB !important}
+.fx:focus-visible{outline:none;border-color:#2563EB !important;box-shadow:0 0 0 4px rgba(59,130,246,.22) !important}
+@keyframes es-up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes es-pop{0%{transform:scale(.4)}60%{transform:scale(1.15)}100%{transform:scale(1)}}
+@keyframes es-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes es-shim{from{background-position:200% 0}to{background-position:-200% 0}}
+@keyframes es-pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}100%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
+@keyframes es-marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes es-spin{to{transform:rotate(360deg)}}
+.up{animation:es-up .42s cubic-bezier(.2,.9,.3,1) both}
+.pop{animation:es-pop .28s cubic-bezier(.2,.9,.3,1)}
+.float{animation:es-float 6s ease-in-out infinite}
+.float2{animation:es-float 7s ease-in-out -2s infinite}
+.shim{background:linear-gradient(90deg,#E8EDF5 0%,#E0F7FC 50%,#E8EDF5 100%);background-size:200% 100%;animation:es-shim 1.4s linear infinite}
+.pulse{animation:es-pulse 1.6s ease-out infinite}
+.marq{animation:es-marq 48s linear infinite}
+.spin{animation:es-spin .9s linear infinite}
+@media (max-width:900px){.hide-sm{display:none !important}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</helmet>
+<div style="min-height: 100%; background: #EEF2F8; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0F1E36; font-size: 15px; line-height: 24px;">
+
+<!-- ============ NAV ============ -->
+<header style="position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid #E8EDF5;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 14px 32px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
+<a href="#" class="h-link" style="display: flex; align-items: center; gap: 10px; color: #1A365D;" aria-label="evraksihirbazi.com ana sayfa">
+<span style="width: 36px; height: 36px; border-radius: 8px; background: #1A365D; display: flex; align-items: center; justify-content: center; color: #00B4D8;"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg></span>
+<span style="font-family: Lexend, sans-serif; font-size: 20px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em;">evraksihirbazi<span style="color: #00B4D8;">.com</span></span>
+</a>
+<nav class="hide-sm" aria-label="Ana menü" style="display: flex; gap: 24px; font-size: 14px; font-weight: 600;">
+<a href="#" class="h-nav">Araçlar</a>
+<a href="#" class="h-nav">Evrak şablonları</a>
+<a href="#sihirbaz" class="h-nav">Nasıl çalışır</a>
+<a href="#sss" class="h-nav">SSS</a>
+</nav>
+<div style="flex: 1 1 0;"></div>
+<div class="hide-sm" style="display: flex; gap: 8px; align-items: center;">
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: #F0FDF4; color: #15803D; font-size: 12px; line-height: 16px; font-weight: 700;"><svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Güncel rehber · 2026–27</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 999px; background: #F9FAFB; border: 1px solid #E8EDF5; color: #4B5563; font-size: 12px; line-height: 16px; font-weight: 700;"><svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>SSL güvenli</span>
+</div>
+<a href="#sihirbaz" class="tr h-navy fx" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 12px; background: #1A365D; color: #FFFFFF; font-size: 15px; line-height: 20px; font-weight: 700; text-decoration: none; border: 1px solid transparent; box-sizing: border-box;">Ücretsiz ön kontrol<svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</div>
+</header>
+
+<sc-if value="{{ geriDonen }}" hint-placeholder-val="{{ true }}">
+<div style="background: #1A365D; color: #FFFFFF;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 10px 32px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; font-size: 14px; line-height: 20px;">
+<svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color: #00B4D8;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+<span style="flex: 1 1 260px; min-width: 0;"><b style="font-weight: 700;">Tekrar hoş geldiniz, Öğretmenim.</b> Dönem başı dosyanız <b style="font-weight: 700;">{{ pctLabel }}</b> hazır, {{ eksik }} evrak eksik.</span>
+<a href="#sihirbaz" class="tr h-magic fx" style="min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 14px; border-radius: 10px; background: #2563EB; color: #FFFFFF; font-size: 14px; font-weight: 700; text-decoration: none; border: 1px solid transparent; box-sizing: border-box;">Kaldığım yerden devam et<svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</div>
+</div>
+</sc-if>
+
+<main>
+<!-- ============ HERO ============ -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 32px 40px; box-sizing: border-box;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 56px; align-items: center;">
+
+<div style="display: flex; flex-direction: column; gap: 24px; min-width: 0;">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 8px; border-radius: 999px; background: #E0F7FC; color: #1A365D; font-size: 13px; line-height: 18px; font-weight: 700;"><span style="width: 22px; height: 22px; border-radius: 999px; background: #1A365D; color: #00B4D8; display: flex; align-items: center; justify-content: center;"><svg class="i" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span>Yapay zekâ destekli evrak asistanı</span>
+<h1 style="margin: 0; font-family: Lexend, sans-serif; font-size: 54px; line-height: 60px; font-weight: 600; letter-spacing: -0.025em; color: #1A365D;">Eksik evrakınızı 30&#160;saniyede bulun, tek tıkla hazırlayın.</h1>
+<p style="margin: 0; font-size: 18px; line-height: 28px; color: #4B5563; max-width: 520px;">Okulunuzu, sürecinizi ve görevinizi seçin. Sihirbaz hangi evrakın gerektiğini, neden gerektiğini ve nereden alınacağını tek listede çıkarsın.</p>
+
+<form onSubmit="{{ onSubmit }}" style="margin: 8px 0 0; padding: 8px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E8EDF5; box-shadow: 0 10px 24px -6px rgba(15,30,54,0.22); display: flex; flex-direction: column; gap: 8px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px;">
+<label style="display: flex; flex-direction: column; gap: 6px; padding: 12px 12px 12px; border-radius: 20px; background: #F9FAFB;">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;"><span style="width: 18px; height: 18px; border-radius: 999px; background: #1A365D; color: #FFFFFF; font-size: 11px; line-height: 18px; font-weight: 700; text-align: center;">1</span>Okul türü</span>
+<span style="position: relative; display: block;">
+<select class="tr fx" value="{{ okul }}" onChange="{{ onOkul }}" style="width: 100%; min-height: 44px; appearance: none; -webkit-appearance: none; padding: 0 36px 0 12px; border-radius: 12px; border: 1px solid {{ okulBd }}; background: #FFFFFF; color: #0F1E36; font-size: 15px; line-height: 22px; font-weight: 500; cursor: pointer;">
+<option value="">Seçin</option>
+<option value="ilkokul">İlkokul</option>
+<option value="ortaokul">Ortaokul</option>
+<option value="lise">Lise</option>
+<option value="okuloncesi">Okul öncesi</option>
+</select>
+<svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="position: absolute; right: 12px; top: 13px; color: #6B7280; pointer-events: none;"><path d="m6 9 6 6 6-6"/></svg>
+</span>
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 20px; background: #F9FAFB;">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;"><span style="width: 18px; height: 18px; border-radius: 999px; background: #1A365D; color: #FFFFFF; font-size: 11px; line-height: 18px; font-weight: 700; text-align: center;">2</span>Süreç</span>
+<span style="position: relative; display: block;">
+<select class="tr fx" value="{{ surec }}" onChange="{{ onSurec }}" style="width: 100%; min-height: 44px; appearance: none; -webkit-appearance: none; padding: 0 36px 0 12px; border-radius: 12px; border: 1px solid {{ surecBd }}; background: #FFFFFF; color: #0F1E36; font-size: 15px; line-height: 22px; font-weight: 500; cursor: pointer;">
+<option value="">Seçin</option>
+<option value="donembasi">Dönem başı evrakları</option>
+<option value="sinav">Yazılı sınav ve analiz</option>
+<option value="bep">BEP / Kaynaştırma</option>
+<option value="donemsonu">Dönem sonu</option>
+</select>
+<svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="position: absolute; right: 12px; top: 13px; color: #6B7280; pointer-events: none;"><path d="m6 9 6 6 6-6"/></svg>
+</span>
+</label>
+<label style="display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 20px; background: #F9FAFB;">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;"><span style="width: 18px; height: 18px; border-radius: 999px; background: #1A365D; color: #FFFFFF; font-size: 11px; line-height: 18px; font-weight: 700; text-align: center;">3</span>Görev</span>
+<span style="position: relative; display: block;">
+<select class="tr fx" value="{{ gorev }}" onChange="{{ onGorev }}" style="width: 100%; min-height: 44px; appearance: none; -webkit-appearance: none; padding: 0 36px 0 12px; border-radius: 12px; border: 1px solid {{ gorevBd }}; background: #FFFFFF; color: #0F1E36; font-size: 15px; line-height: 22px; font-weight: 500; cursor: pointer;">
+<option value="">Seçin</option>
+<option value="brans">Branş öğretmeni</option>
+<option value="sinif">Sınıf öğretmeni</option>
+<option value="rehber">Sınıf rehber öğretmeni</option>
+<option value="zumre">Zümre başkanı</option>
+</select>
+<svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="position: absolute; right: 12px; top: 13px; color: #6B7280; pointer-events: none;"><path d="m6 9 6 6 6-6"/></svg>
+</span>
+</label>
+</div>
+<button type="submit" class="tr h-magic fx" style="min-height: 56px; border: 1px solid transparent; border-radius: 20px; background: #2563EB; color: #FFFFFF; font-size: 16px; line-height: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; box-shadow: 0 8px 20px -6px rgba(59,130,246,0.55);">
+<sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}"><svg class="i spin" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Sihirbaz yazıyor…</sc-if>
+<sc-if value="{{ notLoading }}" hint-placeholder-val="{{ true }}"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="color: #E0F7FC;"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg>Sihirli listeyi oluştur</sc-if>
+</button>
+</form>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: -8px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 700; color: #1A365D;">Tek tıkla başlayın:</span>
+<sc-for list="{{ presets }}" as="p" hint-placeholder-count="3"><button type="button" class="tr h-chip fx" onClick="{{ p.pick }}" style="min-height: 36px; display: inline-flex; align-items: center; gap: 6px; padding: 0 12px; border-radius: 999px; border: 1px solid #D5DCE7; background: #FFFFFF; color: #0F1E36; font-size: 13px; line-height: 18px; font-weight: 600; cursor: pointer;"><svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #2563EB;"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>{{ p.label }}</button></sc-for>
+</div>
+<sc-if value="{{ hata }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: -8px 0 0; display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 12px; background: #FEF2F2; color: #DC2626; font-size: 14px; line-height: 20px; font-weight: 600;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Listeyi oluşturmak için üç alanı da seçin.</p>
+</sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; line-height: 18px; color: #4B5563; font-weight: 500;">
+<span style="display: inline-flex; align-items: center; gap: 6px;"><svg class="i i2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #15803D;"><path d="M20 6 9 17l-5-5"/></svg>Kayıt gerekmez</span>
+<span style="display: inline-flex; align-items: center; gap: 6px;"><svg class="i i2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #15803D;"><path d="M20 6 9 17l-5-5"/></svg>45 saniyede liste</span>
+<span style="display: inline-flex; align-items: center; gap: 6px;"><svg class="i i2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #15803D;"><path d="M20 6 9 17l-5-5"/></svg>Verileriniz tarayıcınızda kalır</span>
+</div>
+</div>
+
+<!-- Hero right: floating live mockup -->
+<div aria-label="Örnek kontrol listesi önizlemesi" role="img" style="position: relative; min-height: 580px; border-radius: 28px; background-color: #E6ECF5; background-image: radial-gradient(#C3CEDF 1px, transparent 1.2px); background-size: 22px 22px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 48px 28px; box-sizing: border-box;">
+<span aria-hidden="true" style="position: absolute; width: 520px; height: 520px; border-radius: 999px; border: 1px solid #D3DCE9; left: 50%; top: 50%; margin: -260px 0 0 -260px;"></span>
+<span aria-hidden="true" style="position: absolute; width: 360px; height: 360px; border-radius: 999px; border: 1px solid #D3DCE9; left: 50%; top: 50%; margin: -180px 0 0 -180px;"></span>
+<span aria-hidden="true" style="position: absolute; right: 64px; top: 56px; color: #00B4D8;"><svg class="i" width="22" height="22" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span>
+
+<div class="float" style="position: relative; width: 100%; max-width: 420px; border-radius: 20px; background: rgba(255,255,255,0.78); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,0.95); box-shadow: 0 1px 0 0 #E8EDF5, 0 24px 48px -16px rgba(15,30,54,0.30); padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; align-items: center; gap: 12px;">
+<span style="width: 40px; height: 40px; border-radius: 10px; background: #1A365D; color: #00B4D8; display: flex; align-items: center; justify-content: center;"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
+<div style="flex: 1 1 0; min-width: 0;">
+<div style="font-family: Lexend, sans-serif; font-size: 17px; line-height: 24px; font-weight: 600; color: #1A365D;">Dönem başı dosyanız</div>
+<div style="font-size: 12px; line-height: 16px; color: #6B7280; font-weight: 500;">Ortaokul · Branş öğretmeni</div>
+</div>
+<span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #F0FDF4; color: #15803D; font-size: 12px; line-height: 16px; font-weight: 700;"><span class="pulse" style="width: 7px; height: 7px; border-radius: 999px; background: #22C55E;"></span>Canlı</span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 16px; padding: 14px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E8EDF5;">
+<span style="position: relative; width: 72px; height: 72px; flex-shrink: 0;">
+<svg width="72" height="72" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34" style="fill: none; stroke: #E8EDF5; stroke-width: 8;"></circle><circle cx="40" cy="40" r="34" transform="rotate(-90 40 40)" style="fill: none; stroke: #2563EB; stroke-width: 8; stroke-linecap: round; stroke-dasharray: 171 214;"></circle></svg>
+<span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: Lexend, sans-serif; font-size: 18px; font-weight: 600; color: #1A365D;">%80</span>
+</span>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+<div style="font-family: Lexend, sans-serif; font-size: 20px; line-height: 26px; font-weight: 600; color: #0F1E36;">Dosyanız %80 hazır</div>
+<div style="font-size: 13px; line-height: 18px; color: #4B5563;">5 evraktan 4'ü tamam · 1 onay bekliyor</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 2px;">
+<div style="display: flex; align-items: center; gap: 10px; padding: 9px 4px; border-bottom: 1px solid #EEF2F8;"><span style="width: 22px; height: 22px; border-radius: 7px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="flex: 1 1 0; font-size: 14px; line-height: 20px; font-weight: 600;">Yıllık Plan (ünitelendirilmiş)</span><span style="font-size: 12px; line-height: 16px; color: #15803D; font-weight: 700;">Hazır</span></div>
+<div style="display: flex; align-items: center; gap: 10px; padding: 9px 4px; border-bottom: 1px solid #EEF2F8;"><span style="width: 22px; height: 22px; border-radius: 7px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="flex: 1 1 0; font-size: 14px; line-height: 20px; font-weight: 600;">Zümre Öğretmenler Kurulu Tutanağı</span><span style="font-size: 12px; line-height: 16px; color: #15803D; font-weight: 700;">Hazır</span></div>
+<div style="display: flex; align-items: center; gap: 10px; padding: 9px 4px; border-bottom: 1px solid #EEF2F8;"><span style="width: 22px; height: 22px; border-radius: 7px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="flex: 1 1 0; font-size: 14px; line-height: 20px; font-weight: 600;">Haftalık Ders Programı</span><span style="font-size: 12px; line-height: 16px; color: #15803D; font-weight: 700;">e-Okul</span></div>
+<div style="display: flex; align-items: center; gap: 10px; padding: 9px 4px; border-bottom: 1px solid #EEF2F8;"><span style="width: 22px; height: 22px; border-radius: 7px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="flex: 1 1 0; font-size: 14px; line-height: 20px; font-weight: 600;">Ortak Sınav ve Ölçme Takvimi</span><span style="font-size: 12px; line-height: 16px; color: #15803D; font-weight: 700;">Hazır</span></div>
+<div style="display: flex; align-items: center; gap: 10px; padding: 9px 4px;"><span style="width: 22px; height: 22px; border-radius: 7px; background: #FFFBEB; border: 1px solid #FCD34D; color: #B45309; display: flex; align-items: center; justify-content: center; box-sizing: border-box;"><svg class="i" width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span><span style="flex: 1 1 0; font-size: 14px; line-height: 20px; font-weight: 600;">ŞÖK Tutanağı</span><span style="display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 999px; background: #FFFBEB; color: #B45309; font-size: 12px; line-height: 16px; font-weight: 700;"><svg class="i" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Mühür eksik</span></div>
+</div>
+</div>
+
+<div class="float2" style="position: absolute; left: 24px; top: 40px; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 14px; background: rgba(255,255,255,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid #FFFFFF; box-shadow: 0 10px 24px -6px rgba(15,30,54,0.22);">
+<span style="width: 26px; height: 26px; border-radius: 999px; background: #F0FDF4; color: #15803D; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+<span style="display: flex; flex-direction: column;"><span style="font-size: 13px; line-height: 18px; font-weight: 700; color: #0F1E36;">Yıllık Plan hazırlandı</span><span style="font-size: 12px; line-height: 16px; color: #6B7280; font-weight: 500;">A4 · 2,8 sn</span></span>
+</div>
+<div class="float" style="position: absolute; right: 24px; bottom: 36px; display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 14px; background: #1A365D; color: #FFFFFF; box-shadow: 0 10px 24px -6px rgba(15,30,54,0.32); font-size: 13px; line-height: 18px; font-weight: 700;">
+<svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #00B4D8;"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>Maarif Modeli'ne uyumlu şablon
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<section aria-label="Hazırlanabilen evraklar" style="max-width: 1240px; margin: 0 auto; padding: 8px 32px 40px; box-sizing: border-box;">
+<div style="display: flex; align-items: center; gap: 20px; padding: 14px 20px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5; overflow: hidden;">
+<span style="flex-shrink: 0; font-size: 13px; line-height: 18px; font-weight: 700; color: #1A365D;">Sihirbazın hazırladıkları</span>
+<div style="flex: 1 1 0; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);">
+<div class="marq" style="display: flex; gap: 10px; width: max-content;">
+<sc-for list="{{ ticker }}" as="t" hint-placeholder-count="16"><span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #F9FAFB; border: 1px solid #E8EDF5; font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563; white-space: nowrap;"><svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #3774AD;"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/></svg>{{ t }}</span></sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ WIZARD ============ -->
+<section id="sihirbaz" ref="{{ wizRef }}" style="max-width: 1240px; margin: 0 auto; padding: 32px 32px 64px; box-sizing: border-box; scroll-margin-top: 80px;">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 28px;">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 640px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 700; color: #3774AD; letter-spacing: 0.04em; text-transform: uppercase;">Sihirli kontrol listesi</span>
+<h2 style="margin: 0; font-family: Lexend, sans-serif; font-size: 38px; line-height: 46px; font-weight: 600; letter-spacing: -0.02em; color: #1A365D;">Seçin, liste anında oluşsun.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #4B5563;">Her evrak için neden gerektiğini ve nereden alınacağını gösterir. İşaretledikçe dosyanızın hazır olma oranı güncellenir.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; flex-wrap: wrap;">
+<li style="display: flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E8EDF5; font-size: 13px; line-height: 18px; font-weight: 700; color: #1A365D;"><span style="width: 24px; height: 24px; border-radius: 999px; background: #E0F7FC; text-align: center; line-height: 24px;">1</span>Seçin</li>
+<li style="display: flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E8EDF5; font-size: 13px; line-height: 18px; font-weight: 700; color: #1A365D;"><span style="width: 24px; height: 24px; border-radius: 999px; background: #E0F7FC; text-align: center; line-height: 24px;">2</span>İnceleyin</li>
+<li style="display: flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px; background: #FFFFFF; border: 1px solid #E8EDF5; font-size: 13px; line-height: 18px; font-weight: 700; color: #1A365D;"><span style="width: 24px; height: 24px; border-radius: 999px; background: #E0F7FC; text-align: center; line-height: 24px;">3</span>Tamamlayın</li>
+</ol>
+</div>
+
+<div style="border-radius: 28px; background: #FFFFFF; border: 1px solid #E8EDF5; box-shadow: 0 1px 2px 0 rgba(15,30,54,0.06), 0 8px 20px -10px rgba(15,30,54,0.28); padding: 8px; display: flex; flex-wrap: wrap; gap: 8px;">
+
+<!-- Filter sidebar -->
+<aside aria-label="Seçimler" style="flex: 1 1 280px; min-width: 0; border-radius: 22px; background: #F9FAFB; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 22px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;">1 · Okul türü</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{ okulChips }}" as="c" hint-placeholder-count="4"><button type="button" class="tr h-chip fx" aria-pressed="{{ c.sel }}" onClick="{{ c.pick }}" style="min-height: 40px; display: inline-flex; align-items: center; gap: 6px; padding: 0 14px; border-radius: 10px; border: 1px solid {{ c.bd }}; background: {{ c.bg }}; color: {{ c.fg }}; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer;"><sc-if value="{{ c.sel }}" hint-placeholder-val="{{ false }}"><svg class="i i2 pop" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #00B4D8;"><path d="M20 6 9 17l-5-5"/></svg></sc-if>{{ c.label }}</button></sc-for>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;">2 · Süreç</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{ surecChips }}" as="c" hint-placeholder-count="4"><button type="button" class="tr h-chip fx" aria-pressed="{{ c.sel }}" onClick="{{ c.pick }}" style="min-height: 40px; display: inline-flex; align-items: center; gap: 6px; padding: 0 14px; border-radius: 10px; border: 1px solid {{ c.bd }}; background: {{ c.bg }}; color: {{ c.fg }}; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer;"><sc-if value="{{ c.sel }}" hint-placeholder-val="{{ false }}"><svg class="i i2 pop" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #00B4D8;"><path d="M20 6 9 17l-5-5"/></svg></sc-if>{{ c.label }}</button></sc-for>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;">3 · Görev</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{ gorevChips }}" as="c" hint-placeholder-count="4"><button type="button" class="tr h-chip fx" aria-pressed="{{ c.sel }}" onClick="{{ c.pick }}" style="min-height: 40px; display: inline-flex; align-items: center; gap: 6px; padding: 0 14px; border-radius: 10px; border: 1px solid {{ c.bd }}; background: {{ c.bg }}; color: {{ c.fg }}; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer;"><sc-if value="{{ c.sel }}" hint-placeholder-val="{{ false }}"><svg class="i i2 pop" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #00B4D8;"><path d="M20 6 9 17l-5-5"/></svg></sc-if>{{ c.label }}</button></sc-for>
+</div>
+</div>
+<div style="flex: 1 1 0;"></div>
+<div style="display: flex; gap: 10px; align-items: flex-start; padding: 14px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E8EDF5; font-size: 13px; line-height: 19px; color: #4B5563;">
+<svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #3774AD; margin-top: 2px;"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+<span>Liste bir rehberdir. Son kontrolü okul idarenizle yapın.</span>
+</div>
+<button type="button" class="tr h-ghost fx" onClick="{{ reset }}" style="align-self: flex-start; min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; border-radius: 10px; border: 1px solid transparent; background: transparent; color: #1A365D; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>Seçimleri sıfırla</button>
+</aside>
+
+<!-- Results -->
+<div aria-live="polite" style="flex: 999 1 560px; min-width: 0; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px;">
+
+<sc-if value="{{ isEmpty }}" hint-placeholder-val="{{ false }}">
+<div class="up" style="min-height: 520px; border-radius: 20px; border: 1.5px dashed #D5DCE7; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 40px 24px; text-align: center; box-sizing: border-box;">
+<span style="width: 72px; height: 72px; border-radius: 999px; background: #E0F7FC; color: #1A365D; display: flex; align-items: center; justify-content: center;"><svg class="i" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg></span>
+<div style="display: flex; flex-direction: column; gap: 6px; max-width: 420px;">
+<h3 style="margin: 0; font-family: Lexend, sans-serif; font-size: 22px; line-height: 30px; font-weight: 600; color: #1A365D;">Listeniz üç seçim uzağınızda</h3>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #4B5563;">Okul türünüzü, sürecinizi ve görevinizi seçin. Üçüncü seçimde liste kendiliğinden oluşur.</p>
+</div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+<sc-for list="{{ emptySteps }}" as="s" hint-placeholder-count="3"><span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px 8px 8px; border-radius: 999px; background: {{ s.bg }}; border: 1px solid {{ s.bd }}; font-size: 13px; line-height: 18px; font-weight: 700; color: {{ s.fg }};"><span style="width: 22px; height: 22px; border-radius: 999px; background: {{ s.dotBg }}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 11px;"><sc-if value="{{ s.done }}" hint-placeholder-val="{{ false }}"><svg class="i i2 pop" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></sc-if><sc-if value="{{ s.todo }}" hint-placeholder-val="{{ true }}">{{ s.n }}</sc-if></span>{{ s.label }}</span></sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-direction: column; gap: 20px;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span class="shim" style="display: block; width: 120px; height: 12px; border-radius: 6px;"></span>
+<span class="shim" style="display: block; width: 340px; max-width: 100%; height: 22px; border-radius: 8px;"></span>
+</div>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; background: #E0F7FC; color: #1A365D; font-size: 13px; line-height: 18px; font-weight: 700;"><svg class="i spin" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #1A365D;"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Sihirbaz listenizi hazırlıyor…</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px;">
+<sc-for list="{{ skeletons }}" as="k" hint-placeholder-count="4"><div style="border-radius: 16px; border: 1px solid #E8EDF5; padding: 18px; display: flex; flex-direction: column; gap: 12px; min-height: 170px; box-sizing: border-box;"><div style="display: flex; gap: 12px; align-items: center;"><span class="shim" style="width: 26px; height: 26px; border-radius: 8px;"></span><span class="shim" style="flex: 1 1 0; height: 16px; border-radius: 6px;"></span><span class="shim" style="width: 96px; height: 22px; border-radius: 999px;"></span></div><span class="shim" style="display: block; width: 70%; height: 12px; border-radius: 6px;"></span><span class="shim" style="display: block; width: 50%; height: 12px; border-radius: 6px;"></span><div style="flex: 1 1 0;"></div><span class="shim" style="display: block; width: 40%; height: 14px; border-radius: 6px;"></span></div></sc-for>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isReady }}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; flex-direction: column; gap: 20px;">
+<div class="up" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0;">
+<span style="font-size: 12px; line-height: 16px; font-weight: 700; color: #6B7280; letter-spacing: 0.04em; text-transform: uppercase;">Kişisel listeniz</span>
+<h3 style="margin: 0; font-family: Lexend, sans-serif; font-size: 22px; line-height: 30px; font-weight: 600; color: #1A365D;">{{ summary }}</h3>
+<span style="font-size: 14px; line-height: 20px; color: #4B5563;">{{ total }} evrak · {{ eksik }} eksik</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; min-width: 240px;">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 600; color: #4B5563;">Hazır olma oranı</span>
+<span style="font-family: Lexend, sans-serif; font-size: 24px; line-height: 30px; font-weight: 600; color: {{ meterFg }};">{{ pctLabel }}</span>
+</div>
+<div role="progressbar" aria-label="Dosya hazır olma oranı" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ pct }}" style="height: 10px; border-radius: 999px; background: #E8EDF5; overflow: hidden;">
+<div style="height: 100%; width: {{ pct }}%; border-radius: 999px; background: {{ meterBg }}; transition: width .5s cubic-bezier(.2,.9,.3,1), background-color .3s ease;"></div>
+</div>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px; align-items: start;">
+<sc-for list="{{ items }}" as="it" hint-placeholder-count="6">
+<article class="up tr h-card" style="animation-delay: {{ it.delay }}ms; border-radius: 16px; background: #FFFFFF; border: 1px solid {{ it.cbd }}; box-shadow: 0 1px 2px 0 rgba(15,30,54,0.04); padding: 18px; display: flex; flex-direction: column; gap: 12px;">
+<div style="display: flex; align-items: flex-start; gap: 12px;">
+<button type="button" class="tr h-box fx" aria-pressed="{{ it.done }}" aria-label="{{ it.checkLabel }}" onClick="{{ it.toggle }}" style="width: 28px; height: 28px; margin-top: -2px; flex-shrink: 0; border-radius: 8px; border: 1.5px solid {{ it.boxBd }}; background: {{ it.boxBg }}; color: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0;"><sc-if value="{{ it.done }}" hint-placeholder-val="{{ false }}"><svg class="i i2 pop" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></sc-if></button>
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 4px;">
+<h4 style="margin: 0; font-size: 15px; line-height: 22px; font-weight: 700; color: #0F1E36;">{{ it.ad }}</h4>
+<span style="font-size: 12px; line-height: 16px; font-weight: 700; color: {{ it.durumFg }};">{{ it.durum }}</span>
+</div>
+<span style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; padding: 4px 9px; border-radius: 999px; background: {{ it.bbg }}; border: 1px solid {{ it.bbd }}; color: {{ it.bfg }}; font-size: 12px; line-height: 16px; font-weight: 700; white-space: nowrap;">
+<sc-if value="{{ it.isArac }}" hint-placeholder-val="{{ true }}"><svg class="i" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></sc-if>
+<sc-if value="{{ it.isImza }}" hint-placeholder-val="{{ false }}"><svg class="i" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></sc-if>
+<sc-if value="{{ it.isDis }}" hint-placeholder-val="{{ false }}"><svg class="i" width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3"/></svg></sc-if>
+{{ it.badge }}</span>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 8px; padding-left: 40px; font-size: 13px; line-height: 19px; color: #4B5563;">
+<svg class="i" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" style="color: #3774AD; margin-top: 2px;"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+<span><span style="font-weight: 700; color: #0F1E36;">Nereden: </span>{{ it.nereden }}</span>
+</div>
+<sc-if value="{{ it.isOpen }}" hint-placeholder-val="{{ false }}">
+<div class="up" style="margin-left: 40px; padding: 12px 14px; border-radius: 12px; background: #F9FAFB; border: 1px solid #E8EDF5; font-size: 13px; line-height: 20px; color: #0F1E36;">{{ it.neden }}</div>
+</sc-if>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-left: 40px; flex-wrap: wrap;">
+<button type="button" class="tr h-ghost fx" aria-expanded="{{ it.isOpen }}" onClick="{{ it.toggleOpen }}" style="min-height: 36px; margin-left: -10px; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; border-radius: 8px; border: 1px solid transparent; background: transparent; color: #1A365D; font-size: 13px; line-height: 18px; font-weight: 700; cursor: pointer;">Neden gerekli?<svg class="i" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" style="transform: rotate({{ it.rot }}deg); transition: transform .2s ease;"><path d="m6 9 6 6 6-6"/></svg></button>
+<a href="#" class="h-link" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; line-height: 18px; font-weight: 700; color: #2563EB;">{{ it.cta }}<sc-if value="{{ it.isDis }}" hint-placeholder-val="{{ false }}"><svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3"/></svg></sc-if><sc-if value="{{ it.notDis }}" hint-placeholder-val="{{ true }}"><svg class="i" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></sc-if></a>
+</div>
+</article>
+</sc-for>
+</div>
+
+<!-- Action bar -->
+<div class="up" style="animation-delay: 380ms; position: sticky; bottom: 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; padding: 14px 14px 14px 20px; border-radius: 18px; background: rgba(255,255,255,0.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid #E8EDF5; box-shadow: 0 10px 24px -6px rgba(15,30,54,0.22);">
+<div style="flex: 1 1 220px; min-width: 0; display: flex; align-items: center; gap: 10px;">
+<sc-if value="{{ allDone }}" hint-placeholder-val="{{ false }}"><span class="pop" style="width: 28px; height: 28px; border-radius: 999px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span style="font-size: 14px; line-height: 20px; font-weight: 700; color: #15803D;">Dosyanız eksiksiz. Denetime hazırsınız.</span></sc-if>
+<sc-if value="{{ showBulkMsg }}" hint-placeholder-val="{{ false }}"><span class="pop" style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 999px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span role="status" style="font-size: 14px; line-height: 20px; color: #0F1E36;"><b style="font-weight: 700; color: #15803D;">{{ bulkMsg }}</b> {{ eksikDetay }}</span></sc-if>
+<sc-if value="{{ showEksikMsg }}" hint-placeholder-val="{{ true }}"><span style="font-size: 14px; line-height: 20px; color: #4B5563;"><span style="font-weight: 700; color: #0F1E36;">{{ eksik }} evrak eksik.</span> {{ eksikDetay }}</span></sc-if>
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap;">
+<button type="button" class="tr h-sec fx" style="min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; border-radius: 12px; border: 1px solid #C5CFDD; background: #FFFFFF; color: #1A365D; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;"><svg class="i" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>PDF olarak indir</button>
+<button type="button" class="tr h-sec fx" style="min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; border-radius: 12px; border: 1px solid #C5CFDD; background: #FFFFFF; color: #1A365D; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;"><svg class="i" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>Listeyi yazdır</button>
+<sc-if value="{{ hasAracEksik }}" hint-placeholder-val="{{ true }}"><button type="button" class="tr h-magic fx" onClick="{{ bulkMake }}" disabled="{{ bulkBusy }}" aria-busy="{{ bulkBusy }}" style="min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 18px; border-radius: 12px; border: 1px solid transparent; background: #2563EB; color: #FFFFFF; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px -6px rgba(59,130,246,0.55);"><sc-if value="{{ bulkBusy }}" hint-placeholder-val="{{ false }}"><svg class="i spin" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Sihirbaz hazırlıyor…</sc-if><sc-if value="{{ bulkIdle }}" hint-placeholder-val="{{ true }}"><svg class="i" width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" style="color: #E0F7FC;"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/></svg>{{ bulkLabel }}</sc-if></button></sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+
+</div>
+</div>
+</section>
+
+<!-- ============ TRUST ============ -->
+<section aria-labelledby="guven" style="max-width: 1240px; margin: 0 auto; padding: 32px 32px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 620px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 700; color: #3774AD; letter-spacing: 0.04em; text-transform: uppercase;">Şeffaflık</span>
+<h2 id="guven" style="margin: 0; font-family: Lexend, sans-serif; font-size: 38px; line-height: 46px; font-weight: 600; letter-spacing: -0.02em; color: #1A365D;">Güven, açık sözlülükle başlar.</h2>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 1px; border-radius: 20px; overflow: hidden; background: #E8EDF5; border: 1px solid #E8EDF5;">
+<div style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Lexend, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; color: #1A365D;">[00.000]+</span><span style="font-size: 14px; line-height: 20px; color: #4B5563;">Öğretmen kullanıcı</span></div>
+<div style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Lexend, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; color: #1A365D;">[000.000]+</span><span style="font-size: 14px; line-height: 20px; color: #4B5563;">Hazırlanan evrak</span></div>
+<div style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Lexend, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; color: #1A365D;">10</span><span style="font-size: 14px; line-height: 20px; color: #4B5563;">Kayıtsız ücretsiz araç</span></div>
+<div style="background: #FFFFFF; padding: 24px; display: flex; flex-direction: column; gap: 4px;"><span style="font-family: Lexend, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; color: #1A365D;">0</span><span style="font-size: 14px; line-height: 20px; color: #4B5563;">Sunucuya giden öğrenci adı</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px;">
+<div style="border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: #E0F7FC; color: #1A365D; display: flex; align-items: center; justify-content: center;"><svg class="i" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+<h3 style="margin: 0; font-size: 17px; line-height: 24px; font-weight: 700; color: #0F1E36;">Verileriniz tarayıcınızda kalır</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #4B5563;">Kayıt gerektirmeyen araçlarda yazdıklarınız sunucuya gönderilmez; bu tarayıcıda saklanır.</p>
+</div>
+<div style="border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: #E0F7FC; color: #1A365D; display: flex; align-items: center; justify-content: center;"><svg class="i" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+<h3 style="margin: 0; font-size: 17px; line-height: 24px; font-weight: 700; color: #0F1E36;">Kişisel veri filtresi</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #4B5563;">Öğrenci adı, T.C. kimlik no, telefon veya adres içeren istekler yapay zekâya gönderilmeden önce durdurulur.</p>
+</div>
+<div style="border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 44px; height: 44px; border-radius: 12px; background: #E0F7FC; color: #1A365D; display: flex; align-items: center; justify-content: center;"><svg class="i" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></span>
+<h3 style="margin: 0; font-size: 17px; line-height: 24px; font-weight: 700; color: #0F1E36;">Bağımsız platform</h3>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: #4B5563;">Millî Eğitim Bakanlığı veya başka bir kamu kurumuyla bağlantımız yoktur. Şablonlar düzenlenebilir örneklerdir.</p>
+</div>
+</div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="sss" aria-labelledby="sss-h" style="max-width: 1240px; margin: 0 auto; padding: 16px 32px 72px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px;">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 12px;">
+<span style="font-size: 13px; line-height: 18px; font-weight: 700; color: #3774AD; letter-spacing: 0.04em; text-transform: uppercase;">SSS</span>
+<h2 id="sss-h" style="margin: 0; font-family: Lexend, sans-serif; font-size: 38px; line-height: 46px; font-weight: 600; letter-spacing: -0.02em; color: #1A365D;">Aklınızdaki sorular</h2>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: #4B5563;">Cevabını bulamadığınız bir soru mu var? <a href="#" class="h-link" style="font-weight: 700;">Bize yazın</a>.</p>
+</div>
+<div style="flex: 2 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 10px;">
+<sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+<div style="border-radius: 16px; background: #FFFFFF; border: 1px solid #E8EDF5; overflow: hidden;">
+<h3 style="margin: 0;"><button type="button" class="tr h-faq fx" aria-expanded="{{ f.open }}" onClick="{{ f.toggle }}" style="width: 100%; min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 16px 20px; border: 1px solid transparent; border-radius: 16px; background: #FFFFFF; color: #0F1E36; font-size: 16px; line-height: 24px; font-weight: 700; text-align: left; cursor: pointer;">{{ f.q }}<span style="width: 30px; height: 30px; flex-shrink: 0; border-radius: 999px; background: #F9FAFB; border: 1px solid #E8EDF5; color: #1A365D; display: flex; align-items: center; justify-content: center;"><svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="transform: rotate({{ f.rot }}deg); transition: transform .2s ease;"><path d="m6 9 6 6 6-6"/></svg></span></button></h3>
+<sc-if value="{{ f.open }}" hint-placeholder-val="{{ false }}"><p class="up" style="margin: 0; padding: 0 20px 20px; font-size: 15px; line-height: 24px; color: #4B5563; max-width: 680px;">{{ f.a }}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 0 32px 56px; box-sizing: border-box;">
+<div style="position: relative; overflow: hidden; border-radius: 28px; background: #1A365D; padding: 48px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px;">
+<span aria-hidden="true" style="position: absolute; right: -80px; top: -120px; width: 360px; height: 360px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12);"></span>
+<span aria-hidden="true" style="position: absolute; right: 20px; top: -20px; width: 160px; height: 160px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12);"></span>
+<div style="position: relative; display: flex; flex-direction: column; gap: 10px; max-width: 620px;">
+<h2 style="margin: 0; font-family: Lexend, sans-serif; font-size: 34px; line-height: 42px; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF;">Bir sonraki denetime hazır olun.</h2>
+<p style="margin: 0; font-size: 16px; line-height: 26px; color: #D6E0EE;">Kayıt olmadan listenizi çıkarın, eksiklerinizi bugün kapatın.</p>
+</div>
+<a href="#sihirbaz" class="tr h-magic fx" style="position: relative; min-height: 52px; display: inline-flex; align-items: center; gap: 10px; padding: 0 22px; border-radius: 14px; background: #2563EB; color: #FFFFFF; font-size: 16px; line-height: 20px; font-weight: 700; text-decoration: none; border: 1px solid transparent; box-sizing: border-box;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color: #E0F7FC;"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4"/><path d="M19 14v4"/><path d="M10 2v2"/><path d="M7 8H3"/><path d="M21 16h-4"/><path d="M11 3H9"/></svg>Ücretsiz ön kontrol</a>
+</div>
+</section>
+</main>
+
+<footer style="border-top: 1px solid #DCE3EE; background: #EEF2F8;">
+<div style="max-width: 1240px; margin: 0 auto; padding: 24px 32px 32px; display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; justify-content: space-between; font-size: 13px; line-height: 20px; color: #4B5563;">
+<span>© 2026 evraksihirbazi.com · MEB ile bağlantılı değildir.</span>
+<nav aria-label="Yasal" style="display: flex; flex-wrap: wrap; gap: 20px; font-weight: 600;">
+<a href="#" class="h-nav">Hakkında</a><a href="#" class="h-nav">KVKK Aydınlatma</a><a href="#" class="h-nav">Gizlilik</a><a href="#" class="h-nav">Kullanım Şartları</a>
+</nav>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"baslangic":{"editor":"enum","options":["dolu","bos"],"default":"dolu","section":"Sihirbaz"},"geriDonen":{"editor":"boolean","default":true,"section":"Sihirbaz"},"$preview":{"width":1440,"height":3660}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    var dolu = (props.baslangic || 'dolu') === 'dolu';
+    this.state = {
+      okul: dolu ? 'ortaokul' : '',
+      surec: dolu ? 'donembasi' : '',
+      gorev: dolu ? 'brans' : '',
+      phase: dolu ? 'ready' : 'empty',
+      checked: dolu ? { yillik: true, zumre: true, program: true } : {},
+      open: dolu ? 'sok' : '',
+      faq: 0,
+      hata: false,
+      bulk: 'idle',
+      bulkMsg: ''
+    };
+  }
+  componentWillUnmount() { clearTimeout(this.t); clearTimeout(this.tb); }
+  preset(o, su, g) {
+    var self = this;
+    clearTimeout(this.t);
+    this.setState({ okul: o, surec: su, gorev: g, hata: false, phase: 'loading', checked: {}, open: '', bulk: 'idle' });
+    this.t = setTimeout(function () { self.setState({ phase: 'ready' }); }, 700);
+    if (this.wiz && this.wiz.scrollIntoView) this.wiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  bulkMake() {
+    var s = this.state;
+    if (s.bulk === 'busy' || !(s.okul && s.surec && s.gorev)) return;
+    var todo = this.docs(s.surec, s.gorev).filter(function (d) { return d.tip === 'arac' && !s.checked[d.id]; });
+    if (!todo.length) return;
+    var self = this;
+    clearTimeout(this.tb);
+    this.setState({ bulk: 'busy' });
+    this.tb = setTimeout(function () {
+      var c = Object.assign({}, self.state.checked);
+      todo.forEach(function (d) { c[d.id] = true; });
+      self.setState({ checked: c, bulk: 'done', bulkMsg: todo.length + ' evrak hazırlandı, Word paketi indirildi.' });
+      self.tb = setTimeout(function () { self.setState({ bulk: 'idle' }); }, 6000);
+    }, 1400);
+  }
+  lists() {
+    return {
+      okul: [{ id: 'ilkokul', label: 'İlkokul' }, { id: 'ortaokul', label: 'Ortaokul' }, { id: 'lise', label: 'Lise' }, { id: 'okuloncesi', label: 'Okul öncesi' }],
+      surec: [{ id: 'donembasi', label: 'Dönem başı' }, { id: 'sinav', label: 'Yazılı sınav ve analiz' }, { id: 'bep', label: 'BEP / Kaynaştırma' }, { id: 'donemsonu', label: 'Dönem sonu' }],
+      gorev: [{ id: 'brans', label: 'Branş öğretmeni' }, { id: 'sinif', label: 'Sınıf öğretmeni' }, { id: 'rehber', label: 'Sınıf rehber öğretmeni' }, { id: 'zumre', label: 'Zümre başkanı' }]
+    };
+  }
+  docs(surec, gorev) {
+    var D = {
+      donembasi: [
+        { id: 'yillik', ad: 'Yıllık Plan (ünitelendirilmiş)', tip: 'arac', nereden: 'Yıllık Plan aracı → okul müdürü onayı', neden: 'Dersin yıl boyunca hangi öğrenme çıktılarıyla ve hangi haftalarda işleneceğini gösterir. Ders denetiminde ilk istenen belgelerdendir.' },
+        { id: 'zumre', ad: 'Zümre Öğretmenler Kurulu Tutanağı', tip: 'arac', nereden: 'Zümre tutanağı şablonu · zümre başkanı imzası', neden: 'Ortak ölçme-değerlendirme kararlarını ve yıllık planın zümrece benimsendiğini kayda geçirir.' },
+        { id: 'sok', ad: 'ŞÖK Tutanağı', tip: 'imza', nereden: 'ŞÖK şablonu · ıslak imza ve okul mührü', neden: 'Şube öğretmenler kurulunun sınıfa özel kararlarını belgeler. Katılan öğretmenlerin imzası ve müdür onayı olmadan geçerli sayılmaz.' },
+        { id: 'program', ad: 'Haftalık Ders Programı', tip: 'dis', nereden: 'e-Okul · okul idaresi', neden: 'Girdiğiniz derslerin gün ve saatlerini gösterir; nöbet ve ek ders hesaplarının dayanağıdır.' },
+        { id: 'bgh', ad: 'Belirli Gün ve Haftalar Planı', tip: 'arac', nereden: 'Belirli Gün ve Haftalar aracı', neden: 'Yıl içindeki anma ve kutlamalarda görev dağılımını ve tarihleri tek planda toplar.' },
+        { id: 'olcme', ad: 'Ortak Sınav ve Ölçme Takvimi', tip: 'dis', nereden: 'Zümre kararı · e-Okul sınav tarihleri', neden: 'Yazılı sınav tarihlerinin zümrece ortaklaştırıldığını gösterir; öğrenci ve veliye duyurulur.' }
+      ],
+      sinav: [
+        { id: 'kagit', ad: 'Yazılı Sınav Kağıdı (A/B kitapçık)', tip: 'arac', nereden: 'Sınav Kağıdı aracı', neden: 'Kazanımlara göre hazırlanmış, puanları belirtilmiş resmî sınav kağıdıdır. A/B kitapçık kopya riskini azaltır.' },
+        { id: 'anahtar', ad: 'Cevap Anahtarı ve Puanlama Tablosu', tip: 'arac', nereden: 'Sınav Kağıdı aracı · cevap anahtarı çıktısı', neden: 'Puanlamanın şeffaf ve itiraza açık biçimde yapıldığını gösterir.' },
+        { id: 'optik', ad: 'Optik Form', tip: 'arac', nereden: 'Optik Form aracı', neden: 'Çoktan seçmeli bölümlerin hızlı ve hatasız okunmasını sağlar; kitapçık türü alanı içerir.' },
+        { id: 'analiz', ad: 'Sınav Analizi Raporu', tip: 'arac', nereden: 'Sınav Analizi aracı · e-Okul not aktarımı', neden: 'Soru ve konu bazında başarıyı gösterir; destek gerektiren öğrenci gruplarını belirler.' },
+        { id: 'eokul', ad: 'Notların e-Okul\'a Girişi', tip: 'dis', nereden: 'e-Okul', neden: 'Notların resmî kayda geçmesi için e-Okul\'a süresi içinde girilmesi gerekir.' },
+        { id: 'teslim', ad: 'Sınav Evrakı Teslim Tutanağı', tip: 'imza', nereden: 'Okul idaresi · imza', neden: 'Sınav kağıtlarının arşive teslim edildiğini kayda geçirir.' }
+      ],
+      bep: [
+        { id: 'ram', ad: 'RAM Eğitsel Değerlendirme Raporu', tip: 'dis', nereden: 'Rehberlik ve Araştırma Merkezi (RAM)', neden: 'Öğrencinin kaynaştırma kapsamında olduğunu gösteren dayanak belgedir; BEP bu rapora göre hazırlanır.' },
+        { id: 'birim', ad: 'BEP Geliştirme Birimi Kararı', tip: 'imza', nereden: 'Okul BEP birimi · müdür onayı', neden: 'Birim üyelerini ve öğrenci için alınan kararları resmîleştirir.' },
+        { id: 'bepplan', ad: 'BEP Planı (3 seviyeli)', tip: 'arac', nereden: '3 Seviyeli BEP Robotu', neden: 'Öğrencinin performans düzeyine göre uzun ve kısa dönemli amaçları belirler.' },
+        { id: 'kaba', ad: 'Kaba Değerlendirme Formu', tip: 'arac', nereden: 'BEP Robotu · değerlendirme formu', neden: 'Öğrencinin mevcut performansını ölçer; BEP amaçlarının başlangıç noktasıdır.' },
+        { id: 'veli', ad: 'Veli Bilgilendirme ve Katılım Formu', tip: 'imza', nereden: 'Veli imzası', neden: 'Velinin plan hakkında bilgilendirildiğini ve sürece katıldığını gösterir.' },
+        { id: 'uyarlanmis', ad: 'Uyarlanmış Sınav Kağıdı', tip: 'arac', nereden: 'Sınav Kağıdı aracı · BEP seviyesi', neden: 'Öğrencinin BEP amaçlarına göre uyarlanmış ölçme aracıdır.' }
+      ],
+      donemsonu: [
+        { id: 'karne', ad: 'Karne Görüşleri', tip: 'arac', nereden: 'Karne Görüşü Oluşturucu → e-Okul', neden: 'Her öğrenci için yapıcı ve kişiye özel bir dönem değerlendirmesi sunar.' },
+        { id: 'takdir', ad: 'Teşekkür / Takdir Ön Listesi', tip: 'arac', nereden: 'Belge hesaplama aracı · son karar öğretmenler kurulunda', neden: 'Belge alabilecek öğrencilerin ön listesini çıkarır; kurul kararını kolaylaştırır.' },
+        { id: 'zumresonu', ad: 'Zümre Dönem Sonu Tutanağı', tip: 'arac', nereden: 'Zümre tutanağı şablonu', neden: 'Dönem başı kararlarının ne ölçüde uygulandığını değerlendirir.' },
+        { id: 'analizler', ad: 'Dönem Sınav Analizleri', tip: 'arac', nereden: 'Sınav Analizi aracı', neden: 'Dönem boyunca yapılan sınavların toplu başarı görünümünü verir.' },
+        { id: 'soksonu', ad: 'ŞÖK Dönem Sonu Tutanağı', tip: 'imza', nereden: 'ŞÖK şablonu · ıslak imza ve okul mührü', neden: 'Sınıfın dönem sonu durumunu ve alınan kararları kayda geçirir.' },
+        { id: 'kulup', ad: 'Kulüp Danışman Görüşü', tip: 'arac', nereden: 'Karne ve Kulüp Görüşü Oluşturucu', neden: 'Öğrencinin kulüp çalışmalarına katılımını değerlendirir.' }
+      ]
+    };
+    var list = (D[surec] || []).slice();
+    if ((gorev === 'sinif' || gorev === 'rehber') && surec === 'donembasi') {
+      list.push({ id: 'rehberlik', ad: 'Sınıf Rehberlik Planı', tip: 'dis', nereden: 'Okul rehberlik servisi', neden: 'Sınıfınızın yıl boyu rehberlik etkinliklerini planlar.' });
+      list.push({ id: 'velitop', ad: 'Veli Toplantısı Tutanağı', tip: 'imza', nereden: 'Veli toplantısı şablonu · veli imzaları', neden: 'Dönem başı veli toplantısında alınan kararları ve katılımı kayda geçirir.' });
+    }
+    if ((gorev === 'sinif' || gorev === 'rehber') && surec === 'donemsonu') {
+      list.push({ id: 'rehberrapor', ad: 'Sınıf Rehberlik Faaliyet Raporu', tip: 'dis', nereden: 'Okul rehberlik servisi', neden: 'Yıl içinde yapılan rehberlik etkinliklerinin özetidir.' });
+    }
+    if (gorev === 'zumre') {
+      list.push({ id: 'zumrerapor', ad: 'Zümre Başkanı Değerlendirme Raporu', tip: 'imza', nereden: 'Zümre tutanağı aracı · müdür onayı', neden: 'Zümre kararlarının özetini okul müdürüne iletir.' });
+    }
+    return list;
+  }
+  setField(key, val) {
+    var s = this.state;
+    var next = { okul: s.okul, surec: s.surec, gorev: s.gorev };
+    next[key] = val;
+    clearTimeout(this.t);
+    var patch = {}; patch[key] = val; patch.hata = false;
+    if (!(next.okul && next.surec && next.gorev)) { patch.phase = 'empty'; this.setState(patch); return; }
+    patch.phase = 'loading'; patch.checked = {}; patch.open = '';
+    this.setState(patch);
+    var self = this;
+    this.t = setTimeout(function () { self.setState({ phase: 'ready' }); }, 900);
+  }
+  generate() {
+    var s = this.state;
+    if (!(s.okul && s.surec && s.gorev)) { this.setState({ hata: true }); return; }
+    clearTimeout(this.t);
+    this.setState({ phase: 'loading', checked: {}, open: '', hata: false });
+    var self = this;
+    this.t = setTimeout(function () { self.setState({ phase: 'ready' }); }, 900);
+    if (this.wiz && this.wiz.scrollIntoView) this.wiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  renderVals() {
+    var self = this;
+    var s = this.state;
+    var L = this.lists();
+    var lab = function (arr, id) { for (var i = 0; i < arr.length; i++) { if (arr[i].id === id) return arr[i].label; } return ''; };
+    var chip = function (group) {
+      return function (o) {
+        var sel = s[group] === o.id;
+        return { label: o.label, sel: sel, pick: function () { self.setField(group, o.id); }, bg: sel ? '#1A365D' : '#FFFFFF', fg: sel ? '#FFFFFF' : '#0F1E36', bd: sel ? '#1A365D' : '#D5DCE7' };
+      };
+    };
+    var B = {
+      arac: { label: 'Sihirbaz hazırlar', bg: '#E0F7FC', fg: '#1A365D', bd: '#E0F7FC', cta: 'Şimdi hazırla' },
+      imza: { label: 'Islak imza · mühür', bg: '#FFFBEB', fg: '#B45309', bd: '#FDE68A', cta: 'Şablonu aç' },
+      dis: { label: 'Dış kaynak', bg: '#F9FAFB', fg: '#4B5563', bd: '#E8EDF5', cta: 'Kaynağa git' }
+    };
+    var docs = (s.okul && s.surec && s.gorev) ? this.docs(s.surec, s.gorev) : [];
+    var doneCount = 0;
+    var items = docs.map(function (d, i) {
+      var done = !!s.checked[d.id];
+      if (done) doneCount++;
+      var isOpen = s.open === d.id;
+      var b = B[d.tip];
+      return {
+        id: d.id, ad: d.ad, neden: d.neden, nereden: d.nereden,
+        done: done, isOpen: isOpen, badge: b.label, bbg: b.bg, bfg: b.fg, bbd: b.bd, cta: b.cta,
+        isArac: d.tip === 'arac', isImza: d.tip === 'imza', isDis: d.tip === 'dis', notDis: d.tip !== 'dis',
+        cbd: done ? '#BBF7D0' : '#E8EDF5', boxBg: done ? '#15803D' : '#FFFFFF', boxBd: done ? '#15803D' : '#6B7280',
+        rot: isOpen ? 180 : 0, delay: i * 60,
+        durum: done ? 'Tamamlandı' : (d.tip === 'imza' ? 'İmza / mühür bekliyor' : 'Bekliyor'),
+        durumFg: done ? '#15803D' : (d.tip === 'imza' ? '#B45309' : '#6B7280'),
+        checkLabel: (done ? 'İşareti kaldır: ' : 'Tamamlandı olarak işaretle: ') + d.ad,
+        toggle: function () { var c = Object.assign({}, self.state.checked); c[d.id] = !c[d.id]; self.setState({ checked: c }); },
+        toggleOpen: function () { self.setState({ open: self.state.open === d.id ? '' : d.id }); }
+      };
+    });
+    var total = items.length;
+    var aracEksik = docs.filter(function (d) { return d.tip === 'arac' && !s.checked[d.id]; }).length;
+    var allDoneVal = total > 0 && doneCount === total;
+    var pct = total ? Math.round(doneCount / total * 100) : 0;
+    var faqData = [
+      { q: 'Liste hangi kaynaklara göre oluşturuluyor?', a: 'Liste, seçtiğiniz okul türü, süreç ve görevinize göre platformdaki şablon ve araçlardan derlenir. Okulunuzun uygulaması farklı olabilir; son kontrolü okul idarenizle yapın.' },
+      { q: 'Kayıt olmam gerekiyor mu?', a: 'Hayır. Kontrol listesi ve temel araçlar kayıt olmadan çalışır; yazdıklarınız bu tarayıcıda saklanır. Yapay zekâ destekli araçlar için giriş yapmanız gerekir.' },
+      { q: 'Öğrenci bilgileri yapay zekâya gönderiliyor mu?', a: 'Hayır. Öğrenci adı, T.C. kimlik no, telefon, e-posta veya adres içeren istekler gönderilmeden önce engellenir ve size bir uyarı gösterilir.' },
+      { q: '“Eksiklerin hepsini hazırla” ne yapar?', a: 'Listede “Sihirbaz hazırlar” etiketli ve henüz işaretlenmemiş evrakların hepsini okul ve görev bilgilerinizle tek seferde oluşturur ve tek bir Word paketi olarak indirir. Islak imza ve dış kaynak isteyen evraklar listede kalır.' },
+      { q: 'PDF çıktısı resmî belge yerine geçer mi?', a: 'Hayır. PDF, kendi takibiniz için bir kontrol listesidir. Resmî evrak, okul idaresinin onayıyla geçerlilik kazanır.' }
+    ];
+    var faqs = faqData.map(function (f, i) {
+      var open = s.faq === i;
+      return { q: f.q, a: f.a, open: open, rot: open ? 180 : 0, toggle: function () { self.setState({ faq: self.state.faq === i ? -1 : i }); } };
+    });
+    var step = function (n, label, done) {
+      return { n: n, label: label, done: done, todo: !done, bg: done ? '#F0FDF4' : '#FFFFFF', bd: done ? '#BBF7D0' : '#E8EDF5', fg: done ? '#15803D' : '#4B5563', dotBg: done ? '#15803D' : '#9CA3AF' };
+    };
+    var tick = ['Yıllık Plan', 'Zümre Tutanağı', 'ŞÖK Tutanağı', 'BEP Planı', 'Sınav Kağıdı', 'Sınav Analizi', 'Optik Form', 'Karne Görüşü', 'Belirli Gün ve Haftalar', 'Veli Toplantısı Tutanağı', 'Teşekkür / Takdir Listesi', 'Pano Çıktısı'];
+    var errBd = function (v) { return (s.hata && !v) ? '#DC2626' : '#6B7280'; };
+    return {
+      okul: s.okul, surec: s.surec, gorev: s.gorev,
+      okulBd: errBd(s.okul), surecBd: errBd(s.surec), gorevBd: errBd(s.gorev),
+      onOkul: function (e) { self.setField('okul', e.target.value); },
+      onSurec: function (e) { self.setField('surec', e.target.value); },
+      onGorev: function (e) { self.setField('gorev', e.target.value); },
+      onSubmit: function (e) { if (e && e.preventDefault) e.preventDefault(); self.generate(); },
+      reset: function () { clearTimeout(self.t); self.setState({ okul: '', surec: '', gorev: '', phase: 'empty', checked: {}, open: '', hata: false }); },
+      wizRef: function (el) { self.wiz = el; },
+      hata: s.hata,
+      isEmpty: s.phase === 'empty', isLoading: s.phase === 'loading', notLoading: s.phase !== 'loading', isReady: s.phase === 'ready',
+      okulChips: L.okul.map(chip('okul')), surecChips: L.surec.map(chip('surec')), gorevChips: L.gorev.map(chip('gorev')),
+      emptySteps: [step(1, 'Okul türü', !!s.okul), step(2, 'Süreç', !!s.surec), step(3, 'Görev', !!s.gorev)],
+      skeletons: [1, 2, 3, 4],
+      summary: lab(L.okul, s.okul) + ' · ' + lab(L.surec, s.surec) + ' · ' + lab(L.gorev, s.gorev),
+      items: items, total: total, eksik: total - doneCount, pct: pct, pctLabel: '%' + pct,
+      allDone: total > 0 && doneCount === total, notAllDone: !(total > 0 && doneCount === total),
+      meterBg: pct === 100 ? '#15803D' : '#3B82F6', meterFg: pct === 100 ? '#15803D' : '#1A365D',
+      faqs: faqs,
+      geriDonen: this.props.geriDonen == null ? true : !!this.props.geriDonen,
+      presets: [
+        { label: 'Dönem başı · Branş öğretmeni', o: 'ortaokul', su: 'donembasi', g: 'brans' },
+        { label: 'Yazılı sınav · Branş öğretmeni', o: 'ortaokul', su: 'sinav', g: 'brans' },
+        { label: 'Dönem sonu · Sınıf öğretmeni', o: 'ilkokul', su: 'donemsonu', g: 'sinif' }
+      ].map(function (p) { return { label: p.label, pick: function () { self.preset(p.o, p.su, p.g); } }; }),
+      hasAracEksik: aracEksik > 0,
+      bulkBusy: s.bulk === 'busy', bulkIdle: s.bulk !== 'busy',
+      bulkLabel: 'Eksik ' + aracEksik + ' evrakı tek tıkla hazırla',
+      bulkMake: function () { self.bulkMake(); },
+      bulkMsg: s.bulkMsg,
+      showBulkMsg: s.bulk === 'done' && !allDoneVal,
+      showEksikMsg: s.bulk !== 'done' && !allDoneVal,
+      eksikDetay: aracEksik > 0 ? (aracEksik + ' tanesini sihirbaz tek tıkla hazırlar.') : 'Kalanlar ıslak imza veya dış kaynak bekliyor; çıktısını alıp imzaya götürün.',
+      ticker: tick.concat(tick)
+    };
+  }
+}
+</script>
+</body>
+</html>

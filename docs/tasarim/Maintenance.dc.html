@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Bakım modu · evraksihirbazi.com</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8FAFC}
+.i{fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.i2{stroke-width:2.5}
+button,input{font-family:inherit}
+.tr{transition:background-color .15s ease,border-color .15s ease,box-shadow .18s ease,transform .15s ease,color .15s ease}
+.fx:focus-visible{outline:none;box-shadow:0 0 0 4px rgba(59,130,246,.3) !important}
+.bar-in:focus-within{border-color:#2563EB !important;box-shadow:0 0 0 4px rgba(59,130,246,.18),0 10px 24px -6px rgba(15,30,54,.18) !important}
+.bar-in.bad{border-color:#DC2626 !important;box-shadow:0 0 0 4px rgba(220,38,38,.14) !important}
+.b-pri:hover:not([disabled]){background:#1D4ED8 !important}
+.b-pri:active:not([disabled]){transform:scale(.98)}
+.sup:hover{border-color:#1A365D !important;background:#FFFFFF !important;transform:translateY(-1px)}
+.sup:hover .arr{transform:translateX(3px)}
+.arr{transition:transform .18s ease}
+@keyframes es-up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.up{animation:es-up .6s cubic-bezier(.2,.9,.3,1) both}
+@keyframes es-ping{0%{transform:scale(1);opacity:.6}100%{transform:scale(2.6);opacity:0}}
+.ping{animation:es-ping 1.8s cubic-bezier(0,0,.2,1) infinite}
+@keyframes es-ring{0%{transform:scale(.9);opacity:.55}100%{transform:scale(1.35);opacity:0}}
+.ring1{animation:es-ring 2.6s ease-out infinite}
+.ring2{animation:es-ring 2.6s 1.3s ease-out infinite}
+@keyframes es-belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.belt{animation:es-belt 9s linear infinite}
+@keyframes es-led{0%,100%{opacity:1}50%{opacity:.3}}
+.led{animation:es-led 1.2s ease-in-out infinite}
+.led2{animation:es-led 1.2s .4s ease-in-out infinite}
+@keyframes es-stripe{from{background-position:0 0}to{background-position:28px 0}}
+.stripe{background-image:linear-gradient(135deg,rgba(255,255,255,.28) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.28) 50%,rgba(255,255,255,.28) 75%,transparent 75%);background-size:28px 28px;animation:es-stripe 1s linear infinite}
+@keyframes es-spin{to{transform:rotate(360deg)}}
+.spin{animation:es-spin .8s linear infinite}
+@keyframes es-pop{0%{transform:scale(.5)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+.pop{animation:es-pop .3s cubic-bezier(.2,.9,.3,1) both}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+</style>
+</helmet>
+<div style="position: relative; overflow: hidden; min-height: 900px; background-color: #F8FAFC; background-image: linear-gradient(#E9EEF5 1px, transparent 1px), linear-gradient(90deg, #E9EEF5 1px, transparent 1px); background-size: 48px 48px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; color: #0F172A; display: flex; flex-direction: column;">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 28%, rgba(245,158,11,0.10) 0%, rgba(248,250,252,0) 32%), radial-gradient(ellipse at 50% 30%, rgba(248,250,252,0) 0%, rgba(248,250,252,0) 38%, #F8FAFC 76%);"></span>
+
+<header style="position: relative; max-width: 1200px; width: 100%; margin: 0 auto; padding: 24px 32px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between;">
+<img src="/_blob/54a5b75989dd8cd457b46406a1a56bb8" alt="evraksihirbazi.com" style="height: 22px; width: auto;">
+<span role="status" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 10px; border-radius: 999px; background: #FFFBEB; border: 1px solid #FDE68A; color: #B45309; font-size: 12px; line-height: 16px; font-weight: 700;"><span style="position: relative; width: 8px; height: 8px;"><span class="ping" style="position: absolute; inset: 0; border-radius: 999px; background: #F59E0B;"></span><span style="position: absolute; inset: 0; border-radius: 999px; background: #F59E0B;"></span></span>Sistem Güncelleniyor</span>
+</header>
+
+<main style="position: relative; flex: 1 1 auto; max-width: 720px; width: 100%; margin: 0 auto; padding: 0 24px 48px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px;">
+
+<!-- Illustration: server + document assembly line -->
+<div aria-hidden="true" class="up" style="position: relative; width: 520px; max-width: 100%; height: 250px;">
+<div style="position: absolute; left: 0; right: 0; bottom: 34px; height: 54px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);">
+<div class="belt" style="display: flex; gap: 34px; width: max-content; padding-top: 4px;">
+<span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #EFF6FF; border: 1px solid #BFDBFE;"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #EFF6FF; border: 1px solid #BFDBFE;"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span>
+<span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #EFF6FF; border: 1px solid #BFDBFE;"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #EFF6FF; border: 1px solid #BFDBFE;"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span><span style="width: 36px; height: 46px; border-radius: 6px; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 6px 14px -6px rgba(15,30,54,0.2);"></span>
+</div>
+</div>
+<span style="position: absolute; left: 8%; right: 8%; bottom: 30px; height: 4px; border-radius: 4px; background: #E2E8F0;"></span>
+
+<span class="ring1" style="position: absolute; left: 50%; top: 22px; width: 190px; height: 190px; margin-left: -95px; border-radius: 999px; border: 2px solid #F59E0B;"></span>
+<span class="ring2" style="position: absolute; left: 50%; top: 22px; width: 190px; height: 190px; margin-left: -95px; border-radius: 999px; border: 2px solid #F59E0B;"></span>
+<div style="position: absolute; left: 50%; top: 40px; margin-left: -78px; width: 156px; height: 156px; border-radius: 32px; background: rgba(255,255,255,0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid #FFFFFF; box-shadow: 0 1px 0 #E2E8F0, 0 24px 48px -16px rgba(15,30,54,0.3); display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 22px; box-sizing: border-box;">
+<div style="display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 10px; border-radius: 8px; background: #1A365D;"><span class="led" style="width: 6px; height: 6px; border-radius: 999px; background: #F59E0B;"></span><span class="led2" style="width: 6px; height: 6px; border-radius: 999px; background: #00B4D8;"></span><span style="flex: 1 1 0; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2);"></span></div>
+<div style="display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 10px; border-radius: 8px; background: #1A365D;"><span class="led2" style="width: 6px; height: 6px; border-radius: 999px; background: #22C55E;"></span><span class="led" style="width: 6px; height: 6px; border-radius: 999px; background: #00B4D8;"></span><span style="flex: 1 1 0; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2);"></span></div>
+<div style="display: flex; align-items: center; gap: 8px; height: 30px; padding: 0 10px; border-radius: 8px; background: #1E3A8A;"><span class="led" style="width: 6px; height: 6px; border-radius: 999px; background: #F59E0B;"></span><span style="width: 6px; height: 6px; border-radius: 999px; background: rgba(255,255,255,0.3);"></span><span style="flex: 1 1 0; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.2);"></span></div>
+</div>
+</div>
+
+<h1 class="up" style="animation-delay: .1s; margin: 0; font-family: Lexend, sans-serif; font-size: 44px; line-height: 52px; font-weight: 600; letter-spacing: -0.025em; color: #0F172A;">Daha Güçlü Bir Sihirbaz İçin Güncelleniyoruz</h1>
+<p class="up" style="animation-delay: .16s; margin: 0; max-width: 540px; font-size: 18px; line-height: 28px; color: #475569;">Evrak süreçlerinizi daha da hızlandıracak yeni özellikler ekliyoruz. Çok yakında buradayız.</p>
+
+<!-- Progress card -->
+<div class="up" style="animation-delay: .22s; width: 100%; max-width: 520px; padding: 18px 20px; border-radius: 18px; background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); border: 1px solid #E2E8F0; box-shadow: 0 10px 24px -10px rgba(15,30,54,0.18); display: flex; flex-direction: column; gap: 14px; text-align: left; box-sizing: border-box;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: #0F172A; color: #FFFFFF; font-size: 13px; line-height: 18px; font-weight: 700;"><svg class="i" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" style="color: #FCD34D;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Tahmini Tamamlanma: 15 Dakika İçinde</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #0F172A;">%{{ pct }}</span>
+</div>
+<div role="progressbar" aria-label="Güncelleme ilerlemesi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ pct }}" style="height: 10px; border-radius: 999px; background: #F1F5F9; overflow: hidden;"><div class="stripe" style="height: 100%; width: {{ pct }}%; border-radius: 999px; background-color: #F59E0B; transition: width .6s ease;"></div></div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px; line-height: 18px;">
+<li style="display: flex; align-items: center; gap: 10px; color: #0F172A; font-weight: 600;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="11" height="11" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Verileriniz yedeklendi<span style="margin-left: auto; color: #15803D; font-size: 12px; font-weight: 700;">Tamam</span></li>
+<li style="display: flex; align-items: center; gap: 10px; color: #0F172A; font-weight: 600;"><span style="width: 20px; height: 20px; border-radius: 999px; background: #FFFBEB; border: 1.5px solid #F59E0B; box-sizing: border-box; color: #B45309; display: flex; align-items: center; justify-content: center;"><svg class="i spin" width="11" height="11" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg></span>Yeni şablonlar ve araçlar yükleniyor<span style="margin-left: auto; color: #B45309; font-size: 12px; font-weight: 700;">Sürüyor</span></li>
+<li style="display: flex; align-items: center; gap: 10px; color: #475569; font-weight: 600;"><span style="width: 20px; height: 20px; border-radius: 999px; border: 1.5px solid #CBD5E1; box-sizing: border-box;"></span>Son kontroller<span style="margin-left: auto; color: #64748B; font-size: 12px; font-weight: 700;">Sırada</span></li>
+</ol>
+</div>
+
+<!-- Notify bar -->
+<div class="up" style="animation-delay: .28s; width: 100%; max-width: 520px; display: flex; flex-direction: column; gap: 8px;">
+<sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ submit }}" novalidate style="margin: 0;">
+<div class="tr bar-in {{ barCls }}" style="display: flex; align-items: center; gap: 8px; padding: 6px 6px 6px 16px; border-radius: 16px; background: #FFFFFF; border: 1px solid #CBD5E1; box-shadow: 0 10px 24px -10px rgba(15,30,54,0.18);">
+<svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color: #64748B;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+<label for="m-email" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">E-posta adresiniz</label>
+<input id="m-email" type="email" autocomplete="email" placeholder="ornek@okul.k12.tr" value="{{ email }}" onChange="{{ onEmail }}" aria-invalid="{{ bad }}" aria-describedby="m-email-e" style="flex: 1 1 0; min-width: 0; height: 44px; border: 0; outline: none; background: transparent; font-size: 15px; line-height: 20px; font-weight: 500; color: #0F172A;">
+<button type="submit" class="tr b-pri fx" disabled="{{ loading }}" aria-busy="{{ loading }}" style="flex-shrink: 0; min-height: 44px; display: inline-flex; align-items: center; gap: 8px; padding: 0 16px; border-radius: 11px; border: 0; background: #2563EB; color: #FFFFFF; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;">
+<sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}"><svg class="i spin" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>Kaydediliyor</sc-if>
+<sc-if value="{{ notLoading }}" hint-placeholder-val="{{ true }}"><svg class="i" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>Açıldığında E-posta ile Haber Ver</sc-if>
+</button>
+</div>
+</form>
+<sc-if value="{{ bad }}" hint-placeholder-val="{{ false }}"><span id="m-email-e" role="alert" style="text-align: left; padding-left: 4px; font-size: 13px; line-height: 18px; font-weight: 600; color: #DC2626;">Geçerli bir e-posta adresi girin.</span></sc-if>
+<sc-if value="{{ notBad }}" hint-placeholder-val="{{ true }}"><span style="text-align: left; padding-left: 4px; font-size: 12px; line-height: 16px; color: #64748B;">Yalnızca bu bildirim için kullanılır; tek bir e-posta gönderilir.</span></sc-if>
+</sc-if>
+<sc-if value="{{ done }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 16px; background: #F0FDF4; border: 1px solid #BBF7D0; text-align: left;">
+<span class="pop" style="width: 32px; height: 32px; flex-shrink: 0; border-radius: 999px; background: #15803D; color: #FFFFFF; display: flex; align-items: center; justify-content: center;"><svg class="i i2" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+<span style="font-size: 14px; line-height: 20px; color: #0F172A;"><b style="font-weight: 700;">Listeye eklendiniz.</b> Sihirbaz açılır açılmaz <b style="font-weight: 700;">{{ email }}</b> adresine haber vereceğiz.</span>
+</div>
+</sc-if>
+</div>
+
+<section class="up" aria-labelledby="acik-h" style="animation-delay: .31s; width: 100%; max-width: 520px; padding: 16px 18px; border-radius: 18px; background: #F0FDF4; border: 1px solid #BBF7D0; text-align: left; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px;">
+<h2 id="acik-h" style="margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px; line-height: 20px; font-weight: 700; color: #15803D;"><span style="width: 8px; height: 8px; border-radius: 999px; background: #22C55E;"></span>Beklemenize gerek yok: bu araçlar şu an da açık</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 8px;">
+<a href="#" class="tr sup fx" style="min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; border-radius: 10px; border: 1px solid #BBF7D0; background: #FFFFFF; color: #0F172A; font-size: 13px; font-weight: 700; text-decoration: none;">Sınav Kağıdı<svg class="i arr" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #64748B;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<a href="#" class="tr sup fx" style="min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; border-radius: 10px; border: 1px solid #BBF7D0; background: #FFFFFF; color: #0F172A; font-size: 13px; font-weight: 700; text-decoration: none;">Optik Form<svg class="i arr" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #64748B;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<a href="#" class="tr sup fx" style="min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; border-radius: 10px; border: 1px solid #BBF7D0; background: #FFFFFF; color: #0F172A; font-size: 13px; font-weight: 700; text-decoration: none;">Net Hesaplama<svg class="i arr" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #64748B;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<a href="#" class="tr sup fx" style="min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 12px; border-radius: 10px; border: 1px solid #BBF7D0; background: #FFFFFF; color: #0F172A; font-size: 13px; font-weight: 700; text-decoration: none;">Bu cihazdaki taslaklarım<svg class="i arr" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="color: #64748B;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</div>
+<p style="margin: 0; font-size: 12px; line-height: 18px; color: #475569;">Kayıt gerektirmeyen araçlar tarayıcınızda çalışır; yazdıklarınız bu cihazda kalır.</p>
+</section>
+<div class="up" style="animation-delay: .34s; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 4px;">
+<a href="#" class="tr sup fx" style="min-height: 44px; display: inline-flex; align-items: center; gap: 10px; padding: 0 16px; border-radius: 12px; border: 1px solid #E2E8F0; background: rgba(255,255,255,0.6); color: #0F172A; font-size: 14px; line-height: 20px; font-weight: 700; text-decoration: none;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color: #15803D;"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Acil Destek Hattı · [WhatsApp]<svg class="i arr" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #64748B;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+<a href="#" class="tr sup fx" style="min-height: 44px; display: inline-flex; align-items: center; gap: 10px; padding: 0 16px; border-radius: 12px; border: 1px solid #E2E8F0; background: rgba(255,255,255,0.6); color: #0F172A; font-size: 14px; line-height: 20px; font-weight: 700; text-decoration: none;"><svg class="i" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="color: #2563EB;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>[destek e-postası]<svg class="i arr" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="color: #64748B;"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</div>
+</main>
+
+<footer style="position: relative; padding: 0 24px 28px; text-align: center; font-size: 12px; line-height: 18px; color: #64748B;">Kaydettiğiniz evraklar ve ayarlarınız güncelleme sırasında korunur.</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"ilerleme":{"editor":"range","min":0,"max":100,"step":1,"default":62,"section":"Bakım"},"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { email: '', bad: false, loading: false, done: false }; }
+  componentWillUnmount() { clearTimeout(this.t); }
+  renderVals() {
+    var self = this, s = this.state;
+    var pct = this.props.ilerleme == null ? 62 : this.props.ilerleme;
+    return {
+      pct: pct, email: s.email, bad: s.bad, notBad: !s.bad, loading: s.loading, notLoading: !s.loading, done: s.done, notDone: !s.done,
+      barCls: s.bad ? 'bad' : '',
+      onEmail: function (e) { self.setState({ email: e.target.value, bad: false }); },
+      submit: function (e) {
+        if (e && e.preventDefault) e.preventDefault();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(self.state.email.trim())) { self.setState({ bad: true }); return; }
+        self.setState({ loading: true });
+        self.t = setTimeout(function () { self.setState({ loading: false, done: true }); }, 900);
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
